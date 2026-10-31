@@ -1,0 +1,2483 @@
+
+/* =========================================
+   MORÉ — MENU
+   Clean editorial stylesheet
+   ========================================= */
+
+:root {
+    --cream: #F8F3EA;
+    --beige: #E6D2B8;
+    --paper: #F5F1E9;
+    --brown: #56382A;
+    --terra: #C96F4A;
+    --white: #FFF8EF;
+
+    --more-ink: #30271F;
+    --more-muted: #8B8074;
+    --more-line: rgba(48, 39, 31, .2);
+    --more-accent: #A65D43;
+
+    --art-cream: #F5EBDD;
+    --art-paper: #E8D7C3;
+    --art-brown: #382219;
+    --art-brown-light: #56382A;
+    --art-terracotta: #C3835D;
+    --art-muted: #A88A73;
+}
+
+/* =========================================
+   MENU HERO
+   ========================================= */
+
+.menu-hero {
+    position: relative;
+    display: flex;
+    min-height: 100vh;
+    min-height: 100svh;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 150px 5vw 60px;
+    background:
+        radial-gradient(circle at 75% 35%, rgba(230, 210, 184, .7), transparent 34%),
+        radial-gradient(circle at 15% 85%, rgba(201, 111, 74, .08), transparent 28%),
+        var(--cream);
+}
+
+.menu-hero-top,
+.menu-hero-bottom {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: .16em;
+}
+
+.menu-hero-top span:first-child {
+    color: var(--terra);
+    font-size: 13px;
+}
+
+.menu-hero-content {
+    margin: auto 0;
+}
+
+.menu-label {
+    display: block;
+    margin-bottom: 20px;
+    color: var(--terra);
+    font-size: 11px;
+    letter-spacing: .2em;
+}
+
+.menu-hero-content h1 {
+    color: var(--brown);
+    font-family: "Playfair Display", Georgia, serif;
+    font-size: clamp(100px, 18vw, 260px);
+    font-weight: 400;
+    line-height: .8;
+    letter-spacing: -.07em;
+}
+
+.menu-hero-content p {
+    margin: 55px 0 0 35%;
+    color: var(--brown);
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+.menu-hero-hint {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin: 35px 0 0 35%;
+    color: var(--brown);
+    font-size: 10px;
+    letter-spacing: .16em;
+    opacity: .7;
+}
+
+.menu-hint-line {
+    width: 35px;
+    height: 1px;
+    background: var(--terra);
+}
+
+.menu-hero-bottom {
+    color: var(--brown);
+}
+
+.menu-hero-bottom span:last-child {
+    animation: menuScroll 1.8s ease-in-out infinite;
+}
+
+@keyframes menuScroll {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(6px); }
+}
+
+/* =========================================
+   MENU SECTIONS
+   ========================================= */
+
+.menu-section {
+    position: relative;
+    min-height: 100vh;
+    padding: 130px 5vw 120px;
+    background: var(--cream);
+}
+
+.afternoon-menu {
+    background:
+        radial-gradient(circle at 80% 30%, rgba(230, 210, 184, .45), transparent 35%),
+        var(--cream);
+}
+
+.golden-menu {
+    background:
+        radial-gradient(circle at 30% 45%, rgba(201, 111, 74, .09), transparent 30%),
+        var(--cream);
+}
+
+.evening-menu {
+    background:
+        radial-gradient(circle at 75% 60%, rgba(86, 56, 42, .07), transparent 35%),
+        var(--cream);
+}
+
+.menu-section-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 20px;
+    padding-bottom: 35px;
+    border-bottom: 1px solid rgba(86, 56, 42, .18);
+}
+
+.menu-section-header > div {
+    display: flex;
+    align-items: baseline;
+    flex-wrap: wrap;
+    gap: 18px;
+}
+
+.menu-time {
+    color: var(--terra);
+    font-size: 13px;
+    letter-spacing: .1em;
+}
+
+.menu-period {
+    color: var(--brown);
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: .18em;
+}
+
+.menu-section-number {
+    color: rgba(86, 56, 42, .5);
+    font-size: 10px;
+    letter-spacing: .15em;
+}
+
+.menu-items {
+    width: 100%;
+    margin-top: 10px;
+}
+
+.menu-item {
+    position: relative;
+    translate: 0 0;
+
+    transition:
+        translate 650ms cubic-bezier(0.22, 1, 0.36, 1),
+        padding 650ms cubic-bezier(0.22, 1, 0.36, 1),
+        background-color 450ms ease;
+}
+
+.menu-item::after {
+    transition:
+        opacity 450ms ease,
+        transform 650ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.menu-item:hover {
+    translate: 6px 0;
+    padding-right: 35px;
+    padding-left: 20px;
+    background: rgba(230, 210, 184, .18);
+}
+
+.menu-item:hover::after {
+    opacity: 1;
+    transform: translate(0, -50%);
+}
+
+.menu-item-main {
+    min-width: 0;
+}
+
+.menu-item-main h2 {
+    color: var(--brown);
+    font-family: "Playfair Display", Georgia, serif;
+    font-size: clamp(28px, 3.2vw, 48px);
+    font-weight: 400;
+    line-height: 1;
+    letter-spacing: -.035em;
+    transition:
+        color 350ms ease,
+        transform 450ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.menu-item:hover .menu-item-main h2 {
+    color: var(--terra);
+    transform: translateX(3px);
+}
+
+.menu-item-main p {
+    margin-top: 15px;
+    color: rgba(86, 56, 42, .7);
+    font-size: 13px;
+    line-height: 1.5;
+    letter-spacing: .02em;
+}
+
+.menu-price {
+    flex-shrink: 0;
+    padding-top: 5px;
+    color: var(--brown);
+    font-size: 13px;
+    letter-spacing: .08em;
+}
+
+.menu-item[role="button"] {
+    cursor: pointer;
+}
+
+.menu-item[role="button"]:focus-visible {
+    outline: 1px solid var(--terra);
+    outline-offset: 5px;
+}
+
+.menu-end {
+    display: flex;
+    min-height: 80vh;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 130px 5vw 90px;
+    background:
+        radial-gradient(circle at 50% 45%, rgba(230, 210, 184, .75), transparent 40%),
+        var(--cream);
+}
+
+.menu-end > span {
+    color: var(--terra);
+    font-family: "Playfair Display", Georgia, serif;
+    font-size: 28px;
+    letter-spacing: .08em;
+}
+
+.menu-end h2 {
+    color: var(--brown);
+    font-family: "Playfair Display", Georgia, serif;
+    font-size: clamp(80px, 13vw, 190px);
+    font-weight: 400;
+    line-height: .8;
+    letter-spacing: -.06em;
+}
+
+.menu-end a {
+    align-self: flex-end;
+    color: var(--brown);
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: .16em;
+    text-decoration: none;
+    transition: color .3s ease;
+}
+
+.menu-end a:hover {
+    color: var(--terra);
+}
+
+/* =========================================
+   DISH MODAL
+   ========================================= */
+
+body.dish-modal-open {
+    overflow: hidden;
+}
+
+.dish-modal {
+    position: fixed;
+    inset: 0;
+    z-index: 2000;
+    overflow-x: hidden;
+    overflow-y: auto;
+    padding: 0;
+    background: var(--cream);
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
+    overscroll-behavior: contain;
+    scroll-behavior: auto;
+    transition: opacity .3s ease, visibility 0s linear .3s;
+}
+
+.dish-modal.is-open {
+    visibility: visible;
+    opacity: 1;
+    pointer-events: auto;
+    transition: opacity .3s ease, visibility 0s;
+}
+
+.dish-modal.is-closing {
+    visibility: visible;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity .28s ease;
+}
+
+.dish-modal-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 0;
+    background: rgba(35, 23, 17, .65);
+    opacity: 0;
+    pointer-events: none;
+}
+
+.dish-modal-content {
+    position: relative;
+    z-index: 1;
+    display: block;
+    width: 100%;
+    min-height: 100%;
+    overflow: visible;
+    background: var(--cream);
+    transform: none;
+}
+
+.dish-modal.is-open .dish-modal-content {
+    animation: dishModalEnter .4s cubic-bezier(.22, 1, .36, 1) both;
+}
+
+.dish-modal.is-closing .dish-modal-content {
+    animation: dishModalExit .28s ease both;
+}
+
+@keyframes dishModalEnter {
+    from { opacity: 0; transform: translateY(14px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes dishModalExit {
+    from { opacity: 1; transform: translateY(0); }
+    to { opacity: 0; transform: translateY(8px); }
+}
+
+.dish-modal-close {
+    position: fixed;
+    top: 24px;
+    right: 30px;
+    z-index: 20;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 46px;
+    height: 46px;
+    border: 1px solid rgba(248, 243, 234, .65);
+    border-radius: 50%;
+    background: rgba(40, 29, 23, .18);
+    backdrop-filter: blur(8px);
+    color: #FFFAF2;
+    font-size: 29px;
+    font-weight: 300;
+    line-height: 1;
+    cursor: pointer;
+    transition: background-color .3s ease, color .3s ease, transform .3s ease;
+}
+
+.dish-modal-close:hover {
+    background: var(--cream);
+    color: var(--brown);
+    transform: rotate(90deg);
+}
+
+/* =========================================
+   DISH HERO — PHOTO
+   ========================================= */
+
+.dish-hero {
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    height: 100svh;
+    min-height: 620px;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: hidden;
+    background: var(--brown);
+    color: #FFFAF2;
+}
+
+.dish-modal-image {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    visibility: hidden;
+    opacity: 0;
+}
+
+.dish-modal.is-image-ready .dish-modal-image {
+    visibility: visible;
+    opacity: 1;
+}
+
+.dish-hero-shade {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    background:
+        linear-gradient(90deg, rgba(25, 16, 12, .55), rgba(25, 16, 12, .1) 68%),
+        linear-gradient(0deg, rgba(25, 16, 12, .4), transparent 45%);
+    pointer-events: none;
+}
+
+.dish-hero-top {
+    position: absolute;
+    top: 30px;
+    right: 100px;
+    left: 5vw;
+    z-index: 3;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.dish-hero-logo {
+    font-family: Georgia, serif;
+    font-size: 23px;
+    letter-spacing: .18em;
+}
+
+.dish-hero-edition {
+    font-size: 9px;
+    letter-spacing: .18em;
+}
+
+.dish-hero-copy {
+    position: relative;
+    z-index: 2;
+    width: min(650px, 78vw);
+    margin: auto auto 0 8vw;
+    padding-bottom: 12vh;
+    pointer-events: none;
+}
+
+.dish-modal.is-open .dish-hero-copy {
+    animation: dishTextEnter .55s .08s cubic-bezier(.22, 1, .36, 1) both;
+}
+
+@keyframes dishTextEnter {
+    from { opacity: 0; transform: translateY(18px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.dish-hero-eyebrow {
+    display: block;
+    margin-bottom: 24px;
+    font-size: 10px;
+    letter-spacing: .23em;
+}
+
+.dish-hero-copy h2 {
+    max-width: 800px;
+    margin: 0;
+    color: #F0D8C0;
+    font-family: "Playfair Display", Georgia, serif;
+    font-size: clamp(52px, 8vw, 118px);
+    font-weight: 400;
+    line-height: .98;
+    letter-spacing: -.045em;
+    text-shadow: 0 2px 18px rgba(35, 23, 17, .35);
+}
+
+.dish-modal-description {
+    max-width: 400px;
+    margin-top: 25px;
+    color: rgba(255, 250, 242, .88);
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+.dish-hero-bottom {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 24px 5vw 30px;
+    font-size: 9px;
+    letter-spacing: .16em;
+}
+
+.dish-hero-scroll {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.dish-hero-scroll span {
+    font-size: 18px;
+    animation: dishScroll 1.7s ease-in-out infinite;
+}
+
+@keyframes dishScroll {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(5px); }
+}
+
+/* =========================================
+   DISH RECIPE — COMPACT EDITORIAL
+   Единая версия нижней части блюда
+   ========================================= */
+
+.dish-recipe.dish-art.art-compact {
+    display: block;
+    width: 100%;
+    overflow: hidden;
+    padding: 0;
+    background: var(--art-cream);
+    color: var(--art-brown);
+    font-family: inherit;
+    box-sizing: border-box;
+}
+
+.dish-recipe.dish-art.art-compact *,
+.dish-recipe.dish-art.art-compact *::before,
+.dish-recipe.dish-art.art-compact *::after {
+    box-sizing: border-box;
+}
+
+/* Topline */
+
+.dish-recipe.dish-art.art-compact .compact-topline {
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+    padding: 20px 6%;
+    border-bottom: 1px solid var(--art-terracotta);
+    color: var(--art-brown);
+    font-size: 10px;
+    letter-spacing: .12em;
+}
+
+/* Heading and photo */
+
+.dish-recipe.dish-art.art-compact .compact-hero {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    align-items: center;
+    gap: 30px;
+    padding: 45px 6%;
+}
+
+.dish-recipe.dish-art.art-compact .compact-hero-copy {
+    min-width: 0;
+}
+
+.dish-recipe.dish-art.art-compact .compact-hero-copy h2 {
+    margin: 0;
+    font-family: "Playfair Display", Georgia, serif;
+    font-size: clamp(42px, 6vw, 76px);
+    font-weight: 400;
+    line-height: .95;
+    letter-spacing: -.055em;
+}
+
+.dish-recipe.dish-art.art-compact .compact-hero-copy h2 em {
+    color: var(--more-accent);
+    font-weight: 400;
+}
+
+.dish-recipe.dish-art.art-compact .compact-photo-frame {
+    display: flex;
+    min-width: 0;
+    min-height: 220px;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+    border: 1px solid rgba(56, 34, 25, .25);
+    background: rgba(255, 255, 255, .16);
+}
+
+.dish-recipe.dish-art.art-compact .editorial-dish-image {
+    display: block;
+    width: 100%;
+    max-height: 300px;
+    object-fit: contain;
+}
+
+/* Ingredients and information */
+
+.dish-recipe.dish-art.art-compact .compact-info {
+    padding: 35px 6%;
+}
+
+.dish-recipe.dish-art.art-compact .compact-info-heading {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    padding: 15px 0;
+    border-top: 1px solid rgba(56, 34, 25, .25);
+    font-size: 9px;
+    letter-spacing: .1em;
+}
+
+.dish-recipe.dish-art.art-compact .dish-modal-ingredients {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    margin-top: 0;
+}
+
+.dish-recipe.dish-art.art-compact .dish-ingredient-tag {
+    display: grid;
+    grid-template-columns: 35px minmax(0, 1fr);
+    align-items: center;
+    gap: 12px;
+    padding: 13px 0;
+    border: 0;
+    border-bottom: 1px solid rgba(56, 34, 25, .2);
+    background: transparent;
+    transition: color .25s ease, padding-left .25s ease;
+}
+
+.dish-recipe.dish-art.art-compact .dish-ingredient-tag:hover {
+    padding-left: 5px;
+    color: var(--more-accent);
+    transform: none;
+}
+
+.dish-recipe.dish-art.art-compact .dish-ingredient-number {
+    color: var(--art-terracotta);
+    font-size: 10px;
+}
+
+.dish-recipe.dish-art.art-compact .dish-ingredient-name {
+    color: inherit;
+    font-family: "Playfair Display", Georgia, serif;
+    font-size: clamp(17px, 1.8vw, 22px);
+    line-height: 1.4;
+}
+
+/* Taste */
+
+.dish-recipe.dish-art.art-compact .compact-taste {
+    margin-top: 35px;
+}
+
+.dish-recipe.dish-art.art-compact .dish-modal-taste-notes {
+    margin: 20px 0;
+    color: #795B49;
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+.dish-recipe.dish-art.art-compact .dish-modal-taste-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 20px;
+}
+
+.dish-recipe.dish-art.art-compact .dish-taste-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 12px;
+    border: 1px solid rgba(56, 34, 25, .25);
+    border-radius: 30px;
+    background: transparent;
+    color: var(--art-brown);
+    transition: background-color .25s ease, color .25s ease, border-color .25s ease;
+}
+
+.dish-recipe.dish-art.art-compact .dish-taste-tag:hover {
+    border-color: var(--art-brown);
+    background: var(--art-brown);
+    color: var(--art-cream);
+    transform: none;
+}
+
+.dish-recipe.dish-art.art-compact .dish-taste-number {
+    color: var(--art-terracotta);
+    font-size: 9px;
+}
+
+.dish-recipe.dish-art.art-compact .dish-taste-name {
+    font-size: 9px;
+    letter-spacing: .06em;
+    overflow-wrap: anywhere;
+}
+
+/* Price */
+
+.dish-recipe.dish-art.art-compact .compact-price {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 30px 6%;
+    border-top: 1px solid rgba(56, 34, 25, .3);
+    border-bottom: 1px solid rgba(56, 34, 25, .3);
+}
+
+.dish-recipe.dish-art.art-compact .dish-modal-price {
+    color: var(--art-brown);
+    font-family: "Playfair Display", Georgia, serif;
+    font-size: clamp(38px, 7vw, 76px);
+    font-weight: 400;
+    line-height: 1;
+    letter-spacing: -.05em;
+    white-space: nowrap;
+}
+
+/* Footer */
+
+.dish-recipe.dish-art.art-compact .compact-footer {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    align-items: center;
+    gap: 15px;
+    padding: 25px 6%;
+    background: var(--art-cream);
+}
+
+.dish-recipe.dish-art.art-compact .dish-footer-logo {
+    color: var(--art-brown);
+    font-family: "Playfair Display", Georgia, serif;
+    font-size: 27px;
+    letter-spacing: .08em;
+}
+
+.dish-recipe.dish-art.art-compact .dish-footer-logo > span {
+    margin-left: 3px;
+    font-family: Arial, sans-serif;
+    font-size: 9px;
+    vertical-align: top;
+}
+
+.dish-recipe.dish-art.art-compact .dish-footer-message {
+    margin: 0;
+    color: #795B49;
+    font-family: "Playfair Display", Georgia, serif;
+    font-size: 13px;
+    font-style: italic;
+    text-align: right;
+}
+
+.dish-recipe.dish-art.art-compact .dish-recipe-back {
+    grid-column: 1 / -1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    width: 100%;
+    padding: 15px 0 0;
+    border: 0;
+    border-top: 1px solid rgba(56, 34, 25, .3);
+    background: transparent;
+    color: var(--art-brown);
+    font: inherit;
+    font-size: 10px;
+    letter-spacing: .12em;
+    text-align: left;
+    cursor: pointer;
+    transition: color .25s ease;
+}
+
+.dish-recipe.dish-art.art-compact .dish-recipe-back:hover {
+    color: var(--more-accent);
+}
+
+.dish-recipe.dish-art.art-compact .dish-recipe-back > span {
+    font-size: 17px;
+}
+
+/* =========================================
+   RESPONSIVE
+   ========================================= */
+
+@media (max-width: 1000px) {
+    .dish-recipe.dish-art.art-compact .compact-hero {
+        gap: 24px;
+    }
+}
+
+@media (max-width: 800px) {
+    .dish-hero {
+        min-height: 580px;
+    }
+
+    .dish-hero-copy {
+        width: 84vw;
+        margin-left: 6vw;
+        padding-bottom: 12vh;
+    }
+}
+
+@media (max-width: 680px) {
+    .menu-hero {
+        min-height: 90vh;
+        min-height: 90svh;
+        padding: 110px 6vw 45px;
+    }
+
+    .menu-hero-content h1 {
+        font-size: clamp(85px, 25vw, 150px);
+    }
+
+    .menu-hero-content p {
+        margin: 35px 0 0;
+        font-size: 14px;
+    }
+
+    .menu-hero-hint {
+        margin: 28px 0 0;
+    }
+
+    .menu-section {
+        min-height: auto;
+        padding: 90px 6vw;
+    }
+
+    .menu-section-header {
+        gap: 15px;
+    }
+
+    .menu-section-header > div {
+        gap: 10px;
+    }
+
+    .menu-time {
+        font-size: 11px;
+    }
+
+    .menu-period {
+        font-size: 9px;
+    }
+
+    .menu-item {
+        min-height: auto;
+        gap: 20px;
+        padding: 30px 25px 30px 0;
+    }
+
+    .menu-item:hover {
+        padding-right: 25px;
+        padding-left: 8px;
+    }
+
+    .menu-item-main h2 {
+        font-size: clamp(24px, 7vw, 34px);
+    }
+
+    .menu-item-main p {
+        max-width: 240px;
+        font-size: 12px;
+    }
+
+    .menu-price {
+        padding-top: 3px;
+        font-size: 11px;
+    }
+
+    .menu-end {
+        min-height: 75vh;
+        padding: 100px 6vw 60px;
+    }
+
+    .menu-end h2 {
+        font-size: clamp(70px, 20vw, 120px);
+    }
+
+    .menu-end a {
+        align-self: flex-start;
+    }
+
+    .dish-modal-close {
+        top: 16px;
+        right: 16px;
+        width: 40px;
+        height: 40px;
+    }
+
+    .dish-hero {
+        height: 88vh;
+        height: 88svh;
+        min-height: 570px;
+        max-height: 850px;
+    }
+
+    .dish-hero-top {
+        top: 22px;
+        right: 70px;
+        left: 6vw;
+        align-items: flex-start;
+    }
+
+    .dish-hero-edition {
+        max-width: 160px;
+        font-size: 7px;
+        line-height: 1.6;
+        text-align: right;
+    }
+
+    .dish-hero-copy {
+        width: 88vw;
+        margin-left: 6vw;
+        padding-bottom: 10vh;
+    }
+
+    .dish-hero-eyebrow {
+        margin-bottom: 17px;
+        font-size: 8px;
+    }
+
+    .dish-hero-copy h2 {
+        font-size: clamp(43px, 12vw, 68px);
+    }
+
+    .dish-modal-description {
+        max-width: 320px;
+        margin-top: 17px;
+        font-size: 13px;
+    }
+
+    .dish-hero-bottom {
+        align-items: flex-end;
+        padding: 20px 6vw 24px;
+        font-size: 7px;
+        line-height: 1.8;
+    }
+
+    .dish-hero-bottom > span:first-child {
+        max-width: 130px;
+    }
+
+    .dish-hero-scroll {
+        gap: 8px;
+        text-align: right;
+    }
+
+    .dish-hero-scroll span {
+        font-size: 15px;
+    }
+
+    .dish-recipe.dish-art.art-compact .compact-topline {
+        gap: 12px;
+        padding: 17px 6%;
+        font-size: 8px;
+        letter-spacing: .08em;
+    }
+
+    .dish-recipe.dish-art.art-compact .compact-hero {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 25px;
+        padding: 35px 6%;
+    }
+
+    .dish-recipe.dish-art.art-compact .compact-hero-copy h2 {
+        font-size: clamp(42px, 10vw, 65px);
+    }
+
+    .dish-recipe.dish-art.art-compact .compact-photo-frame {
+        min-height: 180px;
+    }
+
+    .dish-recipe.dish-art.art-compact .editorial-dish-image {
+        max-height: 260px;
+    }
+
+    .dish-recipe.dish-art.art-compact .compact-info {
+        padding: 28px 6%;
+    }
+
+    .dish-recipe.dish-art.art-compact .dish-ingredient-name {
+        font-size: 19px;
+    }
+
+    .dish-recipe.dish-art.art-compact .compact-price {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 16px;
+        padding: 25px 6%;
+    }
+
+    .dish-recipe.dish-art.art-compact .dish-modal-price {
+        font-size: clamp(42px, 12vw, 68px);
+    }
+
+    .dish-recipe.dish-art.art-compact .compact-footer {
+        padding: 22px 6%;
+    }
+}
+
+@media (max-width: 380px) {
+    .menu-hero-content h1 {
+        font-size: 85px;
+    }
+
+    .menu-item {
+        gap: 12px;
+    }
+
+    .menu-item-main h2 {
+        font-size: 24px;
+    }
+
+    .dish-recipe.dish-art.art-compact .compact-topline {
+        font-size: 7px;
+    }
+
+    .dish-recipe.dish-art.art-compact .compact-hero-copy h2 {
+        font-size: 40px;
+    }
+
+    .dish-recipe.dish-art.art-compact .compact-info-heading {
+        font-size: 8px;
+    }
+}
+
+/* =========================================
+   ACCESSIBILITY
+   ========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+    .menu-hero-bottom span:last-child,
+    .dish-hero-scroll span,
+    .dish-modal.is-open .dish-modal-content,
+    .dish-modal.is-open .dish-hero-copy {
+        animation: none !important;
+    }
+
+    .dish-modal,
+    .dish-modal-close,
+    .menu-item,
+    .menu-item-main h2,
+    .dish-recipe.dish-art.art-compact *,
+    .dish-recipe.dish-art.art-compact *::before,
+    .dish-recipe.dish-art.art-compact *::after {
+        transition: none !important;
+    }
+}
+
+
+/* =========================================
+   MORÉ — CINEMATIC CHOCOLATE RECIPE
+   Decorative gradient, soft swirls & depth
+   ========================================= */
+
+.dish-recipe.art-compact {
+    --cin-cream: #F5EBDD;
+    --cin-caramel: #D9B99A;
+    --cin-terra: #A97857;
+    --cin-brown: #79543D;
+    --cin-dark: #422C22;
+    --cin-text: #F8EBDD;
+    --cin-muted: #D5B9A0;
+
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+    padding: 34px clamp(22px, 6vw, 82px) 22px;
+    color: var(--cin-dark);
+
+    background:
+        radial-gradient(
+            ellipse at 8% 30%,
+            rgba(255, 248, 235, .55),
+            transparent 32%
+        ),
+        radial-gradient(
+            ellipse at 92% 48%,
+            rgba(201, 139, 98, .18),
+            transparent 34%
+        ),
+        linear-gradient(
+            180deg,
+            #F5EBDD 0%,
+            #EAD4BA 17%,
+            #C69D7C 34%,
+            #987052 51%,
+            #684733 70%,
+            #422C22 100%
+        );
+}
+
+/* Большие тонкие кольца за контентом */
+
+.dish-recipe.art-compact::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 24%;
+    right: -135px;
+    width: clamp(260px, 38vw, 460px);
+    aspect-ratio: 1;
+    border: 1px solid rgba(255, 240, 220, .19);
+    border-radius: 50%;
+    box-shadow:
+        0 0 0 22px rgba(255, 240, 220, .035),
+        0 0 0 48px rgba(255, 240, 220, .025),
+        0 0 0 78px rgba(66, 44, 34, .035);
+    transform: rotate(-24deg);
+    pointer-events: none;
+}
+
+/* Большая полупрозрачная буква M */
+
+.dish-recipe.art-compact::after {
+    content: "M";
+    position: absolute;
+    z-index: -1;
+    right: -.045em;
+    bottom: 2%;
+    color: rgba(255, 242, 224, .045);
+    font-family: "Playfair Display", Georgia, serif;
+    font-size: clamp(280px, 48vw, 640px);
+    font-weight: 400;
+    line-height: .75;
+    pointer-events: none;
+}
+
+/* Верхняя строка */
+
+.art-compact .compact-topline {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    padding-bottom: 14px;
+    border-bottom: 1px solid rgba(86, 56, 42, .18);
+    color: rgba(86, 56, 42, .68);
+    font-size: 9px;
+    letter-spacing: .16em;
+}
+
+/* Компактная композиция с названием */
+
+.art-compact .compact-hero {
+    position: relative;
+    display: flex;
+    min-height: 185px;
+    align-items: center;
+    padding: 28px 0 34px;
+    overflow: hidden;
+}
+
+/* Дополнительное фото внизу не нужно */
+
+.art-compact .compact-photo-frame {
+    display: none !important;
+}
+
+.art-compact .compact-hero-copy {
+    position: relative;
+    z-index: 1;
+    max-width: 720px;
+}
+
+.art-compact .compact-eyebrow {
+    display: block;
+    margin-bottom: 17px;
+    color: #79543D;
+    font-size: 9px;
+    letter-spacing: .2em;
+}
+
+.art-compact .compact-hero-copy h2 {
+    margin: 0;
+    color: #503729;
+    font-family: "Playfair Display", Georgia, serif;
+    font-size: clamp(43px, 7vw, 82px);
+    font-weight: 400;
+    letter-spacing: -.065em;
+    line-height: .91;
+}
+
+.art-compact .compact-hero-copy h2 em {
+    color: #79543D;
+    font-weight: 400;
+}
+
+.art-compact .compact-side-note {
+    display: inline-block;
+    margin-top: 20px;
+    color: rgba(80, 55, 41, .65);
+    font-size: 8px;
+    letter-spacing: .18em;
+}
+
+/* Нежные извилистые линии */
+
+.art-compact .compact-hero::before,
+.art-compact .compact-hero::after {
+    content: "";
+    position: absolute;
+    z-index: 0;
+    width: 260px;
+    height: 100px;
+    border: 1px solid rgba(121, 84, 61, .16);
+    border-radius: 50%;
+    pointer-events: none;
+}
+
+.art-compact .compact-hero::before {
+    top: 10px;
+    right: -90px;
+    transform: rotate(-28deg);
+    box-shadow:
+        0 0 0 12px rgba(255, 247, 232, .06),
+        0 0 0 26px rgba(121, 84, 61, .045);
+}
+
+.art-compact .compact-hero::after {
+    right: -45px;
+    bottom: 8px;
+    width: 210px;
+    height: 75px;
+    border-color: rgba(255, 247, 232, .17);
+    transform: rotate(24deg);
+}
+
+.art-compact .compact-hero-star {
+    position: absolute;
+    top: 15px;
+    right: 12%;
+    color: rgba(121, 84, 61, .23);
+    font-size: clamp(35px, 5vw, 62px);
+    font-weight: 300;
+    pointer-events: none;
+}
+
+/* Ингредиенты и вкусовые ноты */
+
+.art-compact .compact-info {
+    position: relative;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    gap: 26px clamp(24px, 5vw, 68px);
+    padding: 26px 0 30px;
+    border-top: 1px solid rgba(255, 244, 227, .25);
+    border-bottom: 1px solid rgba(255, 244, 227, .2);
+}
+
+.art-compact .compact-info > .compact-info-heading:first-child,
+.art-compact .compact-description,
+.art-compact > .compact-info > .dish-modal-ingredients {
+    grid-column: 1;
+}
+
+.art-compact .compact-info > .compact-taste {
+    grid-column: 2;
+    grid-row: 1 / span 3;
+    align-self: start;
+}
+
+.art-compact .compact-info-heading {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 8px;
+    color: rgba(255, 241, 223, .75);
+    font-size: 8px;
+    letter-spacing: .13em;
+}
+
+.art-compact .compact-description {
+    margin: 0;
+    color: rgba(255, 244, 229, .88);
+    font-family: "Playfair Display", Georgia, serif;
+    font-size: clamp(17px, 2vw, 23px);
+    line-height: 1.5;
+}
+
+.art-compact .dish-modal-ingredients {
+    display: flex;
+    flex-direction: column;
+}
+
+.art-compact .dish-ingredient-tag {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(255, 244, 227, .17);
+    color: var(--cin-text);
+    background: transparent;
+}
+
+.art-compact .dish-ingredient-number {
+    color: #D7AC87;
+    font-family: "Playfair Display", Georgia, serif;
+    font-size: 12px;
+    font-style: italic;
+}
+
+.art-compact .dish-ingredient-name {
+    color: rgba(255, 244, 229, .9);
+    font-size: 12px;
+}
+
+.art-compact .compact-taste {
+    min-width: 0;
+}
+
+.art-compact .dish-modal-taste-notes {
+    margin: 18px 0;
+    color: rgba(255, 244, 229, .88);
+    font-family: "Playfair Display", Georgia, serif;
+    font-size: clamp(16px, 1.8vw, 21px);
+    line-height: 1.6;
+}
+
+.art-compact .dish-modal-taste-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 7px;
+}
+
+.art-compact .dish-taste-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 8px 10px;
+    border: 1px solid rgba(255, 244, 227, .23);
+    background: rgba(255, 244, 227, .045);
+    color: rgba(255, 244, 229, .85);
+    font-size: 8px;
+    letter-spacing: .07em;
+}
+
+.art-compact .dish-taste-number {
+    color: #D7AC87;
+}
+
+/* Цена — продолжение композиции */
+
+.art-compact .compact-price {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 24px 0;
+    color: var(--cin-text);
+}
+
+.art-compact .compact-price-label,
+.art-compact .compact-price-caption {
+    display: block;
+    font-size: 8px;
+    letter-spacing: .15em;
+}
+
+.art-compact .compact-price-label {
+    color: #F3D6B8;
+}
+
+.art-compact .compact-price-caption {
+    margin-top: 8px;
+    color: rgba(255, 244, 229, .6);
+}
+
+.art-compact .dish-modal-price {
+    color: #F0C39B;
+    font-family: "Playfair Display", Georgia, serif;
+    font-size: clamp(38px, 6vw, 66px);
+    font-weight: 400;
+    letter-spacing: -.055em;
+    line-height: 1;
+    white-space: nowrap;
+}
+
+/* Завершение */
+
+.art-compact .compact-footer {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 14px;
+    padding-top: 17px;
+    border-top: 1px solid rgba(255, 244, 227, .2);
+    color: rgba(255, 244, 229, .65);
+}
+
+.art-compact .dish-footer-logo {
+    color: #F3D6B8;
+    font-family: "Playfair Display", Georgia, serif;
+    font-size: 20px;
+    letter-spacing: .12em;
+}
+
+.art-compact .dish-footer-message {
+    font-size: 9px;
+    letter-spacing: .08em;
+}
+
+.art-compact .dish-recipe-back {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    padding: 10px 0 10px 14px;
+    border: 0;
+    border-left: 1px solid rgba(255, 244, 227, .28);
+    background: transparent;
+    color: #F3D6B8;
+    font: inherit;
+    font-size: 9px;
+    letter-spacing: .12em;
+    cursor: pointer;
+    transition: color .25s ease;
+}
+
+.art-compact .dish-recipe-back:hover {
+    color: #FFFFFF;
+}
+
+/* Адаптация под телефон */
+
+@media (max-width: 700px) {
+    .dish-recipe.art-compact {
+        padding: 25px 22px 18px;
+    }
+
+    .art-compact .compact-topline {
+        font-size: 7px;
+    }
+
+    .art-compact .compact-hero {
+        min-height: 165px;
+        padding: 26px 0;
+    }
+
+    .art-compact .compact-info {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 24px;
+    }
+
+    .art-compact .compact-info > .compact-info-heading:first-child,
+    .art-compact .compact-description,
+    .art-compact > .compact-info > .dish-modal-ingredients,
+    .art-compact .compact-info > .compact-taste {
+        grid-column: 1;
+        grid-row: auto;
+    }
+
+    .art-compact .compact-info-heading {
+        font-size: 7px;
+    }
+
+    .art-compact .compact-footer {
+        gap: 12px;
+    }
+
+    .art-compact .dish-footer-message {
+        display: none;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .dish-recipe.art-compact *,
+    .dish-recipe.art-compact *::before,
+    .dish-recipe.art-compact *::after {
+        animation-duration: .01ms !important;
+        animation-iteration-count: 1 !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+
+/* =========================================
+   MORÉ — CINEMATIC BACKGROUND FIX
+   Stronger gradient + distributed swirls
+   ========================================= */
+
+.dish-recipe.art-compact {
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+
+    background:
+        radial-gradient(
+            ellipse at 12% 8%,
+            rgba(255, 255, 246, .75) 0%,
+            rgba(255, 250, 238, .22) 25%,
+            transparent 48%
+        ),
+        radial-gradient(
+            ellipse at 90% 37%,
+            rgba(225, 170, 123, .25) 0%,
+            transparent 38%
+        ),
+        radial-gradient(
+            ellipse at 8% 76%,
+            rgba(181, 124, 83, .16) 0%,
+            transparent 34%
+        ),
+        linear-gradient(
+            180deg,
+            #F8F0E3 0%,
+            #F0DDC5 13%,
+            #D9B697 28%,
+            #B88B68 43%,
+            #906548 58%,
+            #684631 76%,
+            #422A20 100%
+        ) !important;
+}
+
+/* Декор теперь находится НАД фоном, но ПОД текстом */
+
+.dish-recipe.art-compact::before {
+    z-index: 0;
+    top: 15%;
+    right: -100px;
+    width: clamp(300px, 48vw, 560px);
+
+    border: 1px solid rgba(255, 244, 226, .25);
+    border-radius: 50%;
+
+    box-shadow:
+        0 0 0 16px rgba(255, 244, 226, .055),
+        0 0 0 34px rgba(255, 244, 226, .07),
+        0 0 0 57px rgba(89, 55, 36, .055),
+        0 0 0 82px rgba(255, 244, 226, .035);
+
+    transform: rotate(-32deg);
+    pointer-events: none;
+}
+
+/* Большая буква MORÉ */
+
+.dish-recipe.art-compact::after {
+    z-index: 0;
+    right: -0.04em;
+    bottom: 1%;
+
+    color: rgba(255, 241, 220, .065);
+    font-size: clamp(300px, 49vw, 650px);
+    line-height: .75;
+
+    pointer-events: none;
+}
+
+/* Поднимаем содержимое над декоративными слоями */
+
+.dish-recipe.art-compact > * {
+    position: relative;
+    z-index: 1;
+}
+
+/* Светлая верхняя область */
+
+.art-compact .compact-topline {
+    color: #60412E;
+    border-bottom-color: rgba(79, 49, 33, .24);
+}
+
+.art-compact .compact-hero {
+    overflow: hidden;
+}
+
+/* Несколько дополнительных завитков */
+
+.art-compact .compact-hero::before {
+    top: 0;
+    right: -90px;
+    width: 300px;
+    height: 125px;
+
+    border-color: rgba(119, 76, 49, .23);
+
+    box-shadow:
+        0 0 0 13px rgba(255, 248, 235, .11),
+        0 0 0 27px rgba(119, 76, 49, .08),
+        0 0 0 44px rgba(255, 248, 235, .075);
+
+    transform: rotate(-24deg);
+}
+
+.art-compact .compact-hero::after {
+    right: auto;
+    left: -105px;
+    bottom: 0;
+    width: 250px;
+    height: 85px;
+
+    border-color: rgba(255, 249, 237, .3);
+
+    box-shadow:
+        0 0 0 12px rgba(255, 249, 237, .08),
+        0 0 0 26px rgba(100, 62, 40, .07);
+
+    transform: rotate(21deg);
+}
+
+.art-compact .compact-hero-star {
+    color: rgba(119, 76, 49, .35);
+}
+
+/* Переход к тёмной части: больше контраста */
+
+.art-compact .compact-info {
+    border-top-color: rgba(255, 244, 227, .4);
+    border-bottom-color: rgba(255, 244, 227, .28);
+}
+
+/* Дополнительные завитки по бокам секции */
+
+.art-compact .compact-info {
+    background:
+        radial-gradient(
+            ellipse at 100% 12%,
+            rgba(255, 228, 197, .075),
+            transparent 36%
+        ),
+        radial-gradient(
+            ellipse at 0% 85%,
+            rgba(255, 228, 197, .06),
+            transparent 30%
+        );
+}
+
+.art-compact .compact-info::before,
+.art-compact .compact-info::after {
+    content: "";
+    position: absolute;
+    z-index: 0;
+    width: 230px;
+    height: 90px;
+
+    border: 1px solid rgba(255, 237, 214, .14);
+    border-radius: 50%;
+
+    pointer-events: none;
+}
+
+.art-compact .compact-info::before {
+    top: 14%;
+    right: -115px;
+
+    box-shadow:
+        0 0 0 12px rgba(255, 237, 214, .035),
+        0 0 0 26px rgba(255, 237, 214, .045);
+
+    transform: rotate(36deg);
+}
+
+.art-compact .compact-info::after {
+    bottom: 7%;
+    left: -130px;
+
+    box-shadow:
+        0 0 0 15px rgba(255, 237, 214, .04),
+        0 0 0 30px rgba(255, 237, 214, .025);
+
+    transform: rotate(-27deg);
+}
+
+/* Контент секции поверх завитков */
+
+.art-compact .compact-info > * {
+    position: relative;
+    z-index: 1;
+}
+
+/* Заголовки секций */
+
+.art-compact .compact-info-heading {
+    color: #FFF0DC;
+}
+
+.art-compact .compact-info-heading span {
+    color: #FFF0DC;
+}
+
+/* Описание блюда */
+
+.art-compact .compact-description {
+    color: #FFF4E8;
+    text-shadow: 0 1px 10px rgba(48, 28, 18, .12);
+}
+
+/* Ингредиенты */
+
+.art-compact .dish-ingredient-tag {
+    border-bottom-color: rgba(255, 240, 220, .23);
+}
+
+.art-compact .dish-ingredient-number {
+    color: #F0C39B;
+}
+
+.art-compact .dish-ingredient-name {
+    color: #FFF4E8;
+}
+
+/* Вкусовые заметки */
+
+.art-compact .dish-modal-taste-notes {
+    color: #FFF0DF;
+}
+
+.art-compact .dish-taste-tag {
+    border-color: rgba(255, 239, 219, .3);
+    background: rgba(255, 239, 219, .075);
+    color: #FFF4E8;
+}
+
+.art-compact .dish-taste-number {
+    color: #F2C49C;
+}
+
+/* Цена — выразительная, но без кислотного цвета */
+
+.art-compact .compact-price-label {
+    color: #FFE4C4;
+}
+
+.art-compact .compact-price-caption {
+    color: rgba(255, 242, 226, .8);
+}
+
+.art-compact .dish-modal-price {
+    color: #F4C99F;
+    text-shadow: 0 0 32px rgba(239, 185, 137, .13);
+}
+
+/* Нижний футер */
+
+.art-compact .compact-footer {
+    border-top-color: rgba(255, 239, 219, .26);
+    color: #EBD5BF;
+}
+
+.art-compact .dish-footer-logo {
+    color: #FFE5C7;
+}
+
+.art-compact .dish-footer-message {
+    color: #EBD5BF;
+}
+
+.art-compact .dish-recipe-back {
+    border-left-color: rgba(255, 239, 219, .35);
+    color: #FFE5C7;
+}
+
+.art-compact .dish-recipe-back:hover {
+    color: #FFFFFF;
+}
+
+/* Телефон */
+
+@media (max-width: 700px) {
+    .dish-recipe.art-compact::before {
+        right: -190px;
+        width: 340px;
+    }
+
+    .dish-recipe.art-compact::after {
+        right: -35px;
+        font-size: 310px;
+    }
+
+    .art-compact .compact-info::before {
+        right: -155px;
+    }
+
+    .art-compact .compact-info::after {
+        left: -165px;
+    }
+}
+
+/* Футер продолжает общий шоколадный градиент */
+.dish-recipe.art-compact .compact-footer {
+    background: transparent !important;
+    background-color: transparent !important;
+    color: #FFF4E8;
+    position: relative;
+    z-index: 2;
+}
+
+/* Убираем светлую подложку, если она задана псевдоэлементом */
+.dish-recipe.art-compact .compact-footer::before,
+.dish-recipe.art-compact .compact-footer::after {
+    background: transparent;
+}
+/* Читаемость текста в нижней части модального окна */
+.dish-recipe.art-compact .compact-info,
+.dish-recipe.art-compact .compact-footer {
+    color: #FFF4E8;
+}
+
+/* Основной текст и описание */
+.dish-recipe.art-compact .compact-info p,
+.dish-recipe.art-compact .compact-footer p {
+    color: #F8E8D8;
+}
+
+/* Второстепенные подписи */
+.dish-recipe.art-compact .compact-topline,
+.dish-recipe.art-compact .compact-footer small {
+    color: #E8CDB5;
+}
+
+/* Название блюда */
+.dish-recipe.art-compact .compact-info h2,
+.dish-recipe.art-compact .compact-info h3 {
+    color: #FFF8EF;
+}
+
+/* Цена — тёплый золотистый оттенок */
+.dish-recipe.art-compact .compact-price {
+    color: #FFD39B;
+}
+
+
+/* Делаем цену ярче и заметнее */
+.dish-recipe.art-compact .compact-price {
+    color: #FFD18A !important;
+    font-weight: 600;
+    text-shadow: 0 1px 10px rgba(40, 20, 10, 0.18);
+}
+
+/* Улучшаем читаемость футера */
+.dish-recipe.art-compact .compact-footer {
+    color: #FFF4E8 !important;
+    text-shadow: 0 1px 5px rgba(30, 15, 8, 0.2);
+}
+
+/* Если в футере есть отдельные подписи */
+.dish-recipe.art-compact .compact-footer p,
+.dish-recipe.art-compact .compact-footer small,
+.dish-recipe.art-compact .compact-footer span {
+    color: #F8E7D5 !important;
+}
+
+/* MORÉ — убираем букву M, сохраняя кольца и завитушки */
+.dish-recipe.art-compact::after {
+    content: none !important;
+}
+
+/* Ингредиенты всегда остаются светлыми */
+.dish-recipe.art-compact .dish-ingredient-tag,
+.dish-recipe.art-compact .dish-ingredient-tag:hover,
+.dish-recipe.art-compact .dish-ingredient-tag:focus,
+.dish-recipe.art-compact .dish-ingredient-name,
+.dish-recipe.art-compact .dish-ingredient-tag:hover .dish-ingredient-name {
+    color: #FFF4E8 !important;
+}
+
+/* Номер ингредиента */
+.dish-recipe.art-compact .dish-ingredient-number,
+.dish-recipe.art-compact .dish-ingredient-tag:hover .dish-ingredient-number {
+    color: #F0C39B !important;
+}
+
+/* Убираем тёмный фон при наведении */
+.dish-recipe.art-compact .dish-ingredient-tag:hover {
+    background: rgba(255, 244, 232, 0.07) !important;
+}
+
+/* MORÉ — BACK TO MENU hover animation */
+
+.art-compact .dish-recipe-back {
+    position: relative;
+    transition:
+        color 0.35s ease,
+        padding-left 0.35s ease,
+        border-color 0.35s ease;
+}
+
+/* MORÉ — elegant BACK TO MENU animation */
+
+.art-compact .dish-recipe-back {
+    position: relative;
+    padding: 10px 0 10px 14px;
+
+    color: #FFE5C7;
+    border-left: 1px solid rgba(255, 239, 219, .35);
+
+    transition:
+        color .3s ease,
+        padding-left .35s cubic-bezier(.2, .7, .2, 1),
+        border-color .3s ease,
+        text-shadow .3s ease;
+}
+
+/* Плавное появление при наведении */
+.art-compact .dish-recipe-back:hover {
+    padding-left: 22px;
+    color: #FFFFFF;
+    border-left-color: #F0C39B;
+    text-shadow: 0 0 12px rgba(240, 195, 155, .3);
+}
+
+/* Убираем линию полностью */
+.art-compact .dish-recipe-back::after {
+    content: none !important;
+}
+
+/* MORÉ — noticeable BACK TO MENU animation */
+
+.art-compact .dish-recipe-back {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+
+    transition:
+        transform .35s ease,
+        color .35s ease,
+        border-color .35s ease,
+        text-shadow .35s ease !important;
+}
+
+/* Движение всей кнопки */
+.art-compact .dish-recipe-back:hover {
+    transform: translateX(8px);
+    color: #FFFFFF !important;
+    border-left-color: #F0C39B !important;
+    text-shadow: 0 0 14px rgba(240, 195, 155, .35);
+}
+
+/* Плавно возвращаем кнопку назад */
+.art-compact .dish-recipe-back:not(:hover) {
+    transform: translateX(0);
+}
+
+/* Если внутри кнопки есть стрелка */
+.art-compact .dish-recipe-back svg,
+.art-compact .dish-recipe-back .arrow {
+    transition: transform .35s ease;
+}
+
+.art-compact .dish-recipe-back:hover svg,
+.art-compact .dish-recipe-back:hover .arrow {
+    transform: translateX(-4px);
+}
+
+/* Полностью отключаем старую линию */
+.art-compact .dish-recipe-back::after {
+    content: none !important;
+}
+
+
+/* =========================================
+   MORÉ — CINEMATIC MENU MOTION
+   ========================================= */
+
+/* MENU — заголовок при загрузке */
+
+.menu-hero-top,
+.menu-hero-bottom {
+    animation: menuFadeIn .9s .12s both;
+}
+
+.menu-hero-content .menu-label {
+    animation: menuRise .8s .15s both;
+}
+
+.menu-hero-content h1 {
+    animation: menuTitleReveal 1.2s .2s cubic-bezier(.2, .7, .2, 1) both;
+}
+
+.menu-hero-content p {
+    animation: menuRise .9s .45s both;
+}
+
+.menu-hero-hint {
+    animation: menuFadeIn .9s .7s both;
+}
+
+.menu-hint-line {
+    transform-origin: left;
+    animation: menuLineGrow .8s .85s both;
+}
+
+@keyframes menuFadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes menuRise {
+    from {
+        opacity: 0;
+        transform: translateY(24px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes menuTitleReveal {
+    from {
+        opacity: 0;
+        transform: translateY(45px);
+        filter: blur(8px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+        filter: blur(0);
+    }
+}
+
+@keyframes menuLineGrow {
+    from { transform: scaleX(0); }
+    to { transform: scaleX(1); }
+}
+
+/* MENU — появление при прокрутке */
+
+.menu-reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    filter: blur(3px);
+    transition:
+        opacity .8s ease,
+        transform .85s cubic-bezier(.2, .7, .2, 1),
+        filter .8s ease;
+    transition-delay: var(--reveal-delay, 0ms);
+}
+
+.menu-reveal.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0);
+}
+
+/* Строки блюд — деликатная реакция при наведении */
+
+.menu-item {
+    transition:
+        padding .35s ease,
+        background-color .35s ease,
+        border-color .35s ease;
+}
+
+.menu-item::after {
+    transition:
+        opacity .35s ease,
+        transform .45s cubic-bezier(.2, .7, .2, 1);
+}
+
+.menu-item-main h2 {
+    transition:
+        color .35s ease,
+        transform .45s cubic-bezier(.2, .7, .2, 1);
+}
+
+/* МОДАЛЬНОЕ ОКНО — плавное открытие и закрытие */
+
+.dish-modal {
+    transition:
+        opacity .42s ease,
+        visibility 0s linear .42s;
+}
+
+.dish-modal.is-open {
+    transition:
+        opacity .42s ease,
+        visibility 0s;
+}
+
+.dish-modal.is-closing {
+    transition: opacity .3s ease;
+}
+
+.dish-modal.is-open .dish-modal-content {
+    animation: dishCinematicEnter .75s cubic-bezier(.2, .75, .25, 1) both;
+}
+
+.dish-modal.is-closing .dish-modal-content {
+    animation: dishCinematicExit .3s ease both;
+}
+
+@keyframes dishCinematicEnter {
+    from {
+        opacity: 0;
+        transform: translateY(22px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes dishCinematicExit {
+    from {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    to {
+        opacity: 0;
+        transform: translateY(12px);
+    }
+}
+
+/* Фото — лёгкое приближение камеры */
+
+.dish-modal .dish-modal-image {
+    transform: scale(1.09);
+    filter: brightness(.8);
+    transition:
+        opacity .8s ease,
+        transform 1.5s cubic-bezier(.2, .7, .2, 1),
+        filter 1s ease;
+}
+
+.dish-modal.is-image-ready .dish-modal-image {
+    transform: scale(1);
+    filter: brightness(1);
+}
+
+/* Затемнение поверх фотографии */
+
+.dish-hero-shade {
+    transition: opacity .8s ease;
+}
+
+/* Текст первого экрана блюда */
+
+.dish-modal.is-open .dish-hero-copy {
+    animation: dishCopyReveal .85s .2s cubic-bezier(.2, .7, .25, 1) both;
+}
+
+@keyframes dishCopyReveal {
+    from {
+        opacity: 0;
+        transform: translateY(35px);
+        filter: blur(5px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+        filter: blur(0);
+    }
+}
+
+/* Нижняя редакционная композиция */
+
+.dish-modal.dish-animate-in .compact-topline {
+    animation: recipeReveal .7s .12s both;
+}
+
+.dish-modal.dish-animate-in .compact-hero-copy {
+    animation: recipeReveal .85s .22s cubic-bezier(.2, .7, .25, 1) both;
+}
+
+.dish-modal.dish-animate-in .compact-hero-star {
+    animation: recipeStarReveal 1s .45s cubic-bezier(.2, .7, .25, 1) both;
+}
+
+.dish-modal.dish-animate-in .compact-info-heading {
+    animation: recipeReveal .7s .32s both;
+}
+
+.dish-modal.dish-animate-in .compact-description {
+    animation: recipeReveal .8s .38s both;
+}
+
+.dish-modal.dish-animate-in .dish-ingredient-tag {
+    animation: ingredientReveal .65s both;
+    animation-delay: calc(.42s + var(--ingredient-index, 0) * .09s);
+}
+
+.dish-modal.dish-animate-in .compact-taste {
+    animation: recipeReveal .8s .58s both;
+}
+
+.dish-modal.dish-animate-in .dish-taste-tag {
+    animation: recipeReveal .5s both;
+    animation-delay: calc(.65s + var(--taste-index, 0) * .08s);
+}
+
+.dish-modal.dish-animate-in .compact-price {
+    animation: recipeReveal .85s .72s both;
+}
+
+.dish-modal.dish-animate-in .compact-footer {
+    animation: recipeReveal .8s .82s both;
+}
+
+@keyframes recipeReveal {
+    from {
+        opacity: 0;
+        transform: translateY(22px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes ingredientReveal {
+    from {
+        opacity: 0;
+        transform: translateX(-14px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes recipeStarReveal {
+    from {
+        opacity: 0;
+        transform: rotate(-35deg) scale(.65);
+    }
+    to {
+        opacity: 1;
+        transform: rotate(0) scale(1);
+    }
+}
+
+/* Закрытие — без лишних задержек */
+
+.dish-modal.is-closing .compact-topline,
+.dish-modal.is-closing .compact-hero-copy,
+.dish-modal.is-closing .compact-info,
+.dish-modal.is-closing .compact-price,
+.dish-modal.is-closing .compact-footer {
+    animation: none;
+}
+
+/* Доступность: уважать системную настройку */
+
+@media (prefers-reduced-motion: reduce) {
+    .menu-hero-top,
+    .menu-hero-bottom,
+    .menu-hero-content .menu-label,
+    .menu-hero-content h1,
+    .menu-hero-content p,
+    .menu-hero-hint,
+    .menu-hint-line,
+    .menu-reveal,
+    .dish-modal,
+    .dish-modal-content,
+    .dish-modal .dish-modal-image,
+    .dish-modal.is-open .dish-hero-copy,
+    .dish-modal.dish-animate-in .compact-topline,
+    .dish-modal.dish-animate-in .compact-hero-copy,
+    .dish-modal.dish-animate-in .compact-info-heading,
+    .dish-modal.dish-animate-in .compact-description,
+    .dish-modal.dish-animate-in .dish-ingredient-tag,
+    .dish-modal.dish-animate-in .compact-taste,
+    .dish-modal.dish-animate-in .dish-taste-tag,
+    .dish-modal.dish-animate-in .compact-price,
+    .dish-modal.dish-animate-in .compact-footer {
+        animation: none !important;
+        transition: none !important;
+        filter: none !important;
+    }
+
+    .menu-reveal {
+        opacity: 1;
+        transform: none;
+    }
+
+    .dish-modal .dish-modal-image {
+        transform: none;
+    }
+}
+
+
+/* MORÉ — плавное появление блюд при прокрутке */
+
+.menu-reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    filter: blur(4px);
+
+    transition:
+        opacity 850ms cubic-bezier(0.22, 1, 0.36, 1),
+        transform 850ms cubic-bezier(0.22, 1, 0.36, 1),
+        filter 850ms cubic-bezier(0.22, 1, 0.36, 1);
+
+    transition-delay: var(--reveal-delay, 0ms);
+    will-change: opacity, transform, filter;
+}
+
+.menu-reveal.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0);
+}
+
+/* Уважительно относимся к настройке уменьшения анимации */
+@media (prefers-reduced-motion: reduce) {
+    .menu-reveal,
+    .menu-reveal.is-visible {
+        opacity: 1;
+        transform: none;
+        filter: none;
+        transition: none;
+        transition-delay: 0ms;
+    }
+}
+
+/* MORÉ — содержимое блюда появляется по мере прокрутки */
+
+/* MORÉ — медленное проявление деталей блюда */
+
+.modal-scroll-reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    filter: blur(5px);
+
+    transition:
+        opacity 900ms cubic-bezier(0.22, 1, 0.36, 1),
+        transform 900ms cubic-bezier(0.22, 1, 0.36, 1),
+        filter 900ms cubic-bezier(0.22, 1, 0.36, 1);
+
+    transition-delay: var(--modal-reveal-delay, 0ms);
+}
+
+.modal-scroll-reveal.is-modal-visible {
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .modal-scroll-reveal,
+    .modal-scroll-reveal.is-modal-visible {
+        opacity: 1;
+        transform: none;
+        filter: none;
+        transition: none;
+        transition-delay: 0ms;
+    }
+}
+
+/* =========================================
+   MORÉ — FINAL DISH ROW FIX
+   Плавное наведение и правильные интервалы
+========================================= */
+
+.menu-items {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 0;
+}
+
+.menu-item {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+
+    width: 100%;
+    min-height: 145px;
+    padding: 35px 35px 35px 0;
+    margin: 0;
+
+    box-sizing: border-box;
+    border-bottom: 1px solid rgba(86, 56, 42, 0.16);
+    background-color: transparent;
+
+    translate: 0 0;
+    cursor: pointer;
+
+    transition:
+        translate 700ms cubic-bezier(0.22, 1, 0.36, 1),
+        padding 700ms cubic-bezier(0.22, 1, 0.36, 1),
+        background-color 500ms ease,
+        border-color 500ms ease;
+}
+
+.menu-item::after {
+    transition:
+        opacity 500ms ease,
+        transform 700ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.menu-item:hover {
+    translate: 4px 0;
+    padding-right: 35px;
+    padding-left: 18px;
+
+    background-color: rgba(230, 210, 184, 0.2);
+    border-bottom-color: rgba(201, 111, 74, 0.4);
+}
+
+.menu-item:hover::after {
+    opacity: 1;
+    transform: translate(0, -50%);
+}
+
+.menu-item-main {
+    flex: 1 1 auto;
+    min-width: 0;
+}
+
+.menu-item-main h2 {
+    margin: 0;
+
+    transition:
+        color 500ms ease,
+        transform 700ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.menu-item:hover .menu-item-main h2 {
+    color: var(--terra);
+    transform: translateX(3px);
+}
+
+.menu-price {
+    flex-shrink: 0;
+    white-space: nowrap;
+}
+
+@media (max-width: 680px) {
+    .menu-item {
+        gap: 15px;
+        min-height: 115px;
+        padding: 27px 20px 27px 0;
+    }
+
+    .menu-item:hover {
+        translate: 2px 0;
+        padding-right: 20px;
+        padding-left: 8px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .menu-item,
+    .menu-item::after,
+    .menu-item-main h2 {
+        transition: none !important;
+    }
+}

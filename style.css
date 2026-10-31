@@ -1,0 +1,433 @@
+/* =========================
+   MORÉ — GLOBAL STYLES
+========================= */
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:wght@400;500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #F8F3EA;
+    color: #56382A;
+    font-family: "DM Sans", sans-serif;
+}
+
+/* =========================
+   MORÉ — ONE GLOBAL HEADER
+========================= */
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    width: 100%;
+    height: 90px;
+    padding: 0 5vw;
+
+    background: rgba(248, 243, 234, 0.08);
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(3px);
+
+    border-bottom: 1px solid rgba(86, 56, 42, 0.10);
+}
+
+/* LOGO */
+
+.logo {
+    flex-shrink: 0;
+
+    color: #56382A;
+    font-family: "Playfair Display", serif;
+    font-size: 30px;
+    font-weight: 400;
+    letter-spacing: 0.08em;
+    line-height: 1;
+
+    text-decoration: none;
+}
+
+/* NAVIGATION */
+
+.navigation {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+
+    min-width: 0;
+    margin: 0;
+    white-space: nowrap;
+}
+
+.navigation a {
+    position: relative;
+    flex-shrink: 0;
+
+    color: #56382A;
+    font-family: "DM Sans", sans-serif;
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: 0.12em;
+
+    white-space: nowrap;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+/* Animated underline */
+
+.navigation a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+
+    width: 100%;
+    height: 1px;
+    background: #C96F4A;
+
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.4s cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+
+.navigation a:hover {
+    color: #C96F4A;
+}
+
+.navigation a:hover::after,
+.navigation a.active::after {
+    transform: scaleX(1);
+}
+
+/* OPTIONAL HEADER LINK — VISIT */
+
+.header-cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+
+    flex-shrink: 0;
+
+    color: #56382A;
+    font-size: 9px;
+    font-weight: 600;
+    letter-spacing: 0.15em;
+
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.header-cta:hover {
+    color: #C96F4A;
+}
+
+.header-cta span {
+    display: inline-block;
+    transition: transform 0.3s ease;
+}
+
+.header-cta:hover span {
+    transform: translate(3px, -3px);
+}
+
+/* VISIT — FIND US */
+
+.visit-header-actions {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 24px;
+    flex-shrink: 0;
+}
+
+.visit-header-actions .language-switcher {
+    margin-left: 0;
+}
+
+.visit-header-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    flex-shrink: 0;
+
+    color: #56382A;
+    font-size: 9px;
+    font-weight: 600;
+    letter-spacing: 0.15em;
+
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.visit-header-link:hover {
+    color: #C96F4A;
+}
+
+.visit-header-link span {
+    display: inline-block;
+    transition: transform 0.3s ease;
+}
+
+.visit-header-link:hover span {
+    transform: translate(3px, -3px);
+}
+
+/* =========================
+   LANGUAGE SWITCHER
+========================= */
+
+.language-switcher {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-left: 30px;
+    flex-shrink: 0;
+}
+
+.language-button {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 0 10px 10px;
+
+    border: none;
+    background: transparent;
+
+    color: var(--brown, #56382A);
+    font-family: inherit;
+    font-size: 12px;
+    letter-spacing: 1.5px;
+
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.language-button:hover {
+    color: var(--terra, #C96F4A);
+}
+
+.language-arrow {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    margin-left: 1px;
+    margin-top: -4px;
+
+    border-right: 1.5px solid currentColor;
+    border-bottom: 1.5px solid currentColor;
+
+    transform: rotate(45deg);
+    flex-shrink: 0;
+    transition: transform 0.3s ease;
+}
+
+.language-button[aria-expanded="true"] .language-arrow {
+    transform: translateY(4px) rotate(225deg);
+}
+
+.language-dropdown {
+    position: absolute;
+    z-index: 1000;
+    top: calc(100% + 12px);
+    right: 0;
+
+    min-width: 145px;
+    padding: 7px;
+
+    border: 1px solid rgba(86, 56, 42, 0.15);
+    background: #F8F3EA;
+    box-shadow: 0 12px 30px rgba(56, 36, 25, 0.12);
+}
+
+.language-dropdown[hidden] {
+    display: none;
+}
+
+.language-dropdown button {
+    display: block;
+    width: 100%;
+    padding: 12px 14px;
+
+    border: none;
+    background: transparent;
+
+    color: #56382A;
+    text-align: left;
+    font-family: inherit;
+    font-size: 13px;
+
+    cursor: pointer;
+    transition: background-color 0.25s ease, color 0.25s ease;
+}
+
+.language-dropdown button:hover {
+    background: rgba(201, 111, 74, 0.12);
+    color: #C96F4A;
+}
+
+
+/* =========================================
+   MORÉ — NEW MOBILE HEADER
+========================================= */
+
+/* =========================================
+   MORÉ — NEW MOBILE HEADER
+========================================= */
+
+@media (max-width: 768px) {
+
+    /* HEADER */
+
+    .header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 72px;
+        padding: 0 16px;
+        box-sizing: border-box;
+
+        display: grid;
+        grid-template-columns: 1fr auto 1fr;
+        align-items: center;
+        gap: 8px;
+    }
+
+    /* LOGO */
+
+    .header .logo {
+        position: relative;
+        z-index: 2;
+        justify-self: start;
+        font-size: 22px;
+        letter-spacing: .06em;
+    }
+
+    /* NAVIGATION */
+
+    .header .navigation {
+        position: static;
+        left: auto;
+        transform: none;
+
+        grid-column: 2;
+        justify-self: center;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        margin: 0;
+        white-space: nowrap;
+    }
+
+    .header .navigation a {
+        flex-shrink: 0;
+        font-size: 8px;
+        letter-spacing: .04em;
+        white-space: nowrap;
+    }
+
+    .header .navigation a::after {
+        bottom: -6px;
+    }
+
+    /* LANGUAGE SWITCHER */
+
+    .header .language-switcher {
+        position: static;
+        grid-column: 3;
+        justify-self: end;
+
+        display: flex;
+        align-items: center;
+        margin: 0;
+        z-index: 2;
+    }
+
+    .header .language-button {
+        gap: 5px;
+        padding: 8px 0 8px 3px;
+        font-size: 10px;
+        letter-spacing: .5px;
+    }
+
+    .header .language-arrow {
+        width: 6px;
+        height: 6px;
+    }
+
+    /* VISIT — FIND US */
+
+    .visit-header-actions {
+        display: flex;
+        align-items: center;
+        flex: 0 0 auto;
+        gap: 8px;
+        margin-left: auto;
+    }
+
+    .visit-header-actions .language-switcher {
+        margin-left: 0;
+    }
+
+    .visit-header-actions .visit-header-link {
+        display: inline-flex;
+        align-items: center;
+        gap: 2px;
+        font-size: 7px;
+        letter-spacing: .03em;
+        white-space: nowrap;
+    }
+
+    /* RUSSIAN */
+
+    html[lang="ru"] .header .navigation {
+        gap: 6px;
+    }
+
+    html[lang="ru"] .header .navigation a {
+        font-size: 7px;
+        letter-spacing: 0;
+    }
+
+    /* KAZAKH */
+
+    html[lang="kk"] .header .navigation {
+        gap: 5px;
+    }
+
+    html[lang="kk"] .header .navigation a {
+        font-size: 7px;
+        letter-spacing: 0;
+    }
+}
+
+@media (max-width: 680px) {
+    .header {
+        outline: 2px solid red;
+    }
+
+    .header .language-switcher {
+        outline: 2px solid blue;
+    }
+}

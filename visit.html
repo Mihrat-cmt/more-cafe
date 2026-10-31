@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#F8F3EA">
+    <meta name="description" content="Discover MORÉ — a warm, welcoming café for slow mornings, little pauses and golden hours.">
+    <title>Visit MORÉ — A Place to Stay</title>
+
+    <link rel="stylesheet" href="style.css">
+    
+    <link rel="stylesheet" href="visit.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
+</head>
+
+<body class="visit-page">
+
+<header class="header visit-header" id="top">
+    <a href="index.html" class="logo visit-logo" aria-label="MORÉ home">MORÉ</a>
+
+    <nav class="navigation visit-nav" aria-label="Main navigation">
+        <a href="index.html" data-i18n="nav.home">HOME</a>
+        <a href="menu.html" data-i18n="nav.menu">MENU</a>
+        <a href="visit.html" class="active" data-i18n="nav.visit">VISIT</a>
+    </nav>
+
+    <div class="visit-header-actions">
+        <a href="#visit-details" class="visit-header-link" data-i18n="visit.header.find">FIND US <span>↗</span></a>
+
+        <div class="language-switcher">
+            <button class="language-button" id="languageButton" type="button" aria-expanded="false" aria-label="Выбрать язык">
+                <span id="currentLanguage">EN</span>
+                <span class="language-arrow"></span>
+            </button>
+
+            <div class="language-dropdown" id="languageDropdown" hidden>
+                <button type="button" data-language="ru">Русский</button>
+                <button type="button" data-language="en">English</button>
+                <button type="button" data-language="kk">Қазақша</button>
+            </div>
+        </div>
+    </div>
+</header>
+
+<main>
+
+    <!-- HERO -->
+    <section class="visit-hero">
+        <div class="visit-hero-image">
+            <img
+                src="https://images.unsplash.com/photo-1445116572660-236099ec97a0?auto=format&fit=crop&w=2200&q=85"
+                alt="Warm, welcoming café interior"
+                fetchpriority="high"
+            >
+        </div>
+
+        <div class="visit-hero-shade"></div>
+
+        <div class="visit-hero-content">
+            <p class="visit-eyebrow visit-light-text" data-i18n="visit.hero.eyebrow">
+                YOUR LITTLE PLACE IN THE CITY
+            </p>
+
+            <h1 class="visit-hero-title" data-i18n="visit.hero.title">
+                Come a little<br><em>closer.</em>
+            </h1>
+
+            <div class="visit-hero-bottom">
+                <p data-i18n="visit.hero.description">
+                    Good coffee, unhurried moments<br>and a table that feels like yours.
+                </p>
+
+                <a
+                    href="#visit-intro"
+                    class="visit-round-link"
+                    aria-label="Discover MORÉ"
+                    data-i18n-aria-label="visit.hero.discover"
+                >
+                    <span>↓</span>
+                </a>
+            </div>
+        </div>
+
+        <span class="visit-hero-index" data-i18n="visit.hero.index">
+            A MOMENT AT MORÉ — 01
+        </span>
+    </section>
+
+    <!-- INTRO -->
+    <section class="visit-intro visit-section" id="visit-intro">
+        <div class="visit-intro-label visit-reveal" data-i18n="visit.intro.label">
+            <span class="visit-small-line"></span>A PLACE TO PAUSE
+        </div>
+
+        <div class="visit-intro-main visit-reveal">
+            <h2 data-i18n="visit.intro.title">
+                Not just somewhere<br>to go. Somewhere<br><em>to stay a little longer.</em>
+            </h2>
+
+            <div class="visit-intro-copy">
+                <p data-i18n="visit.intro.paragraph1">
+                    Some days call for a little more time. Another cup of coffee, a familiar face, sunlight moving slowly across the table.
+                </p>
+
+                <p data-i18n="visit.intro.paragraph2">
+                    MORÉ is made for those moments — the ordinary ones that somehow become your favourite part of the day.
+                </p>
+
+                <a href="menu.html" class="visit-text-link" data-i18n="visit.intro.menu">
+                    DISCOVER OUR MENU <span>↗</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ATMOSPHERE -->
+    <section class="visit-story">
+        <div class="visit-story-top visit-reveal">
+            <span data-i18n="visit.story.label">01 / THE ATMOSPHERE</span>
+            <p data-i18n="visit.story.subtitle">A softer kind of everyday.</p>
+        </div>
+
+        <div class="visit-photo-composition">
+            <figure class="visit-photo visit-photo-large visit-reveal">
+                <img
+                    src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&w=1300&q=85"
+                    alt="Sunlit café with inviting tables"
+                    loading="lazy"
+                >
+
+                <figcaption data-i18n="visit.story.photo1">
+                    <span>01</span>ROOM TO BREATHE
+                </figcaption>
+            </figure>
+
+            <div class="visit-photo-side">
+                <p class="visit-photo-note visit-reveal" data-i18n="visit.story.quote">
+                    “A little less rush.<br>A little more <em>life.</em>”
+                </p>
+
+                <figure class="visit-photo visit-photo-small visit-reveal">
+                    <img
+                        src="https://images.unsplash.com/photo-1442512595331-e89e73853f31?auto=format&fit=crop&w=1000&q=85"
+                        alt="Freshly prepared coffee"
+                        loading="lazy"
+                    >
+
+                    <figcaption data-i18n="visit.story.photo2">
+                        <span>02</span>MADE WITH CARE
+                    </figcaption>
+                </figure>
+            </div>
+        </div>
+    </section>
+
+    <!-- DAILY RHYTHM -->
+    <section class="visit-rhythm visit-section">
+        <div class="visit-rhythm-heading visit-reveal">
+            <div class="visit-intro-label" data-i18n="visit.rhythm.label">
+                <span class="visit-small-line"></span>THE RHYTHM OF MORÉ
+            </div>
+
+            <h2 data-i18n="visit.rhythm.title">
+                Every hour has<br>its own <em>feeling.</em>
+            </h2>
+        </div>
+
+        <div class="visit-rhythm-list">
+            <article class="visit-rhythm-item visit-reveal">
+                <span class="visit-rhythm-number">01</span>
+
+                <div class="visit-rhythm-name">
+                    <h3 data-i18n="visit.rhythm.morning.title">Slow mornings</h3>
+                    <p data-i18n="visit.rhythm.morning.text">
+                        For the first coffee and nowhere to rush.
+                    </p>
+                </div>
+
+                <span class="visit-rhythm-time" data-i18n="visit.rhythm.morning.time">
+                    MORNING
+                </span>
+            </article>
+
+            <article class="visit-rhythm-item visit-reveal">
+                <span class="visit-rhythm-number">02</span>
+
+                <div class="visit-rhythm-name">
+                    <h3 data-i18n="visit.rhythm.afternoon.title">Little pauses</h3>
+                    <p data-i18n="visit.rhythm.afternoon.text">
+                        A good table between everything else.
+                    </p>
+                </div>
+
+                <span class="visit-rhythm-time" data-i18n="visit.rhythm.afternoon.time">
+                    AFTERNOON
+                </span>
+            </article>
+
+            <article class="visit-rhythm-item visit-reveal">
+                <span class="visit-rhythm-number">03</span>
+
+                <div class="visit-rhythm-name">
+                    <h3 data-i18n="visit.rhythm.evening.title">Golden hours</h3>
+                    <p data-i18n="visit.rhythm.evening.text">
+                        Warm light, good company, one more moment.
+                    </p>
+                </div>
+
+                <span class="visit-rhythm-time" data-i18n="visit.rhythm.evening.time">
+                    LATE DAY
+                </span>
+            </article>
+        </div>
+    </section>
+
+    <!-- VISIT DETAILS -->
+    <section class="visit-details" id="visit-details">
+        <div class="visit-details-image visit-reveal">
+            <img
+                src="https://images.unsplash.com/photo-1493857671505-72967e2e2760?auto=format&fit=crop&w=1300&q=85"
+                alt="A quiet café table ready for guests"
+                loading="lazy"
+            >
+
+            <span class="visit-image-stamp" data-i18n="visit.details.stamp">
+                A TABLE<br>FOR YOU
+            </span>
+        </div>
+
+        <div class="visit-details-content visit-reveal">
+            <div class="visit-intro-label" data-i18n="visit.details.label">
+                <span class="visit-small-line"></span>COME ON IN
+            </div>
+
+            <h2 data-i18n="visit.details.title">
+                Your next<br>favourite <em>pause.</em>
+            </h2>
+
+            <p class="visit-details-description" data-i18n="visit.details.description">
+                Come by for your morning coffee, stay for something delicious, or simply take a moment for yourself.
+            </p>
+
+            <div class="visit-contact-list">
+                <div class="visit-contact-row">
+                    <span data-i18n="visit.contact.address">FIND US</span>
+                    <p data-i18n="visit.contact.addressValue">Address coming soon</p>
+                </div>
+
+                <div class="visit-contact-row">
+                    <span data-i18n="visit.contact.hours">OPENING HOURS</span>
+                    <p data-i18n="visit.contact.hoursValue">Hours coming soon</p>
+                </div>
+
+                <div class="visit-contact-row">
+                    <span data-i18n="visit.contact.hello">SAY HELLO</span>
+                    <p data-i18n="visit.contact.helloValue">Contact details coming soon</p>
+                </div>
+            </div>
+
+            <p class="visit-details-footnote" data-i18n="visit.details.footnote">
+                We’ll fill in the details when they’re ready. For now, consider this your invitation.
+            </p>
+        </div>
+    </section>
+
+    <!-- FINAL CTA -->
+    <section class="visit-finale">
+        <div class="visit-finale-image">
+            <img
+                src="https://images.unsplash.com/photo-1511920170033-f8396924c348?auto=format&fit=crop&w=2000&q=85"
+                alt="Coffee prepared for a quiet moment"
+                loading="lazy"
+            >
+        </div>
+
+        <div class="visit-finale-overlay"></div>
+
+        <div class="visit-finale-content visit-reveal">
+            <p class="visit-eyebrow visit-light-text" data-i18n="visit.finale.eyebrow">
+                WHENEVER YOU NEED A MOMENT
+            </p>
+
+            <h2 data-i18n="visit.finale.title">
+                We’ll save you<br><em>a little time.</em>
+            </h2>
+
+            <a href="menu.html" class="visit-finale-link" data-i18n="visit.finale.menu">
+                TAKE A LOOK AT THE MENU <span>↗</span>
+            </a>
+        </div>
+
+        <span class="visit-finale-mark" data-i18n="visit.finale.mark">
+            MORÉ — MADE FOR THE MOMENT
+        </span>
+    </section>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="visit-footer">
+    <a href="index.html" class="visit-footer-logo">MORÉ<span>.</span></a>
+
+    <p data-i18n="visit.footer.tagline">
+        A little more time for what matters.
+    </p>
+
+    <a href="#top" class="visit-back-top" data-i18n="visit.footer.top">
+        BACK TO TOP ↑
+    </a>
+
+    <span class="visit-copyright" data-i18n="visit.footer.copyright">
+        © 2026 MORÉ
+    </span>
+</footer>
+
+<script src="script.js"></script>
+
+<script src="visit-translations.js"></script>
+<script src="visit.js"></script>
+
+</body>
+</html>

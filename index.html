@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>MORÉ — Stay a little longer.</title>
+
+    <link rel="stylesheet" href="style.css">   
+    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="decor.css">
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header class="header">
+        <a href="index.html" class="logo">MORÉ</a>
+
+        <nav class="navigation">
+            <a href="index.html" class="active" data-i18n="nav.home">HOME</a>
+            <a href="menu.html" data-i18n="nav.menu">MENU</a>
+            <a href="visit.html" data-i18n="nav.visit">VISIT</a>
+        </nav>
+
+        <div class="language-switcher">
+            <button
+                class="language-button"
+                id="languageButton"
+                type="button"
+                aria-expanded="false"
+                aria-label="Выбрать язык"
+            >
+                <span id="currentLanguage">EN</span>
+                <span class="language-arrow"></span>
+            </button>
+
+            <div class="language-dropdown" id="languageDropdown" hidden>
+                <button type="button" data-language="ru">Русский</button>
+                <button type="button" data-language="en">English</button>
+                <button type="button" data-language="kk">Қазақша</button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+
+        
+        <!-- MORÉ ORGANIC ARTWORK -->
+        
+        
+
+
+        <!-- HERO -->
+        <section class="hero">
+
+            <div class="hero-content">
+
+                <p class="hero-small" data-i18n="home.hero.small">
+                    GOOD MORNING.
+                </p>
+
+                <h1 data-i18n="home.hero.title">WELCOME<br>TO <span>MORÉ.</span></h1>
+
+                <p class="hero-description" data-i18n="home.hero.description">
+                    A café for coffee,<br>
+                    good food and little pauses.
+                </p>
+
+                <p class="hero-tagline" data-i18n="home.hero.tagline">
+                    Stay a little longer.
+                </p>
+
+            </div>
+
+            <!-- IMAGE -->
+            <div class="hero-image">
+                <img
+                    src="images/home/welcome-decor.png"
+                    alt="Декоративная композиция MORÉ"
+                    data-i18n-alt="home.hero.image"
+                >
+            </div>
+
+            <!-- TIME -->
+            <div class="hero-time">
+                <span>08:00</span>
+                <strong data-i18n="home.morning.title">MORNING</strong>
+            </div>
+
+            <!-- SCROLL -->
+            <div class="scroll-indicator">
+                <span data-i18n="home.hero.scroll">SCROLL</span>
+                <span class="arrow">↓</span>
+            </div>
+
+        
+
+        
+        </section>
+
+        <!-- DECORATIVE WAVE -->
+        
+
+
+        
+
+
+        <!-- ABOUT MORÉ -->
+        <section class="about-section">
+
+            <div class="about-label">
+                <span>01</span>
+                <span data-i18n="home.about.label">ABOUT MORÉ</span>
+            </div>
+
+            <div class="about-content">
+
+                <p class="about-intro" data-i18n="home.about.intro">
+                    A place for coffee,<br>
+                    good food and little pauses.
+                </p>
+
+                <p class="about-text" data-i18n="home.about.text">
+                    MORÉ is a modern city café made for slow mornings,
+                    long lunches and evenings that don't need an ending.
+                </p>
+
+            </div>
+
+            <div class="about-line"></div>
+
+        </section>
+
+        <!-- DAY INTRO -->
+        <section class="day-intro">
+
+            <div class="day-time">
+                <span>08:00</span>
+                <span data-i18n="home.day.days">MONDAY — SUNDAY</span>
+            </div>
+
+            <div class="day-title">
+                <span class="day-label" data-i18n="home.day.label">A DAY AT</span>
+                <h2>MORÉ</h2>
+            </div>
+
+            <p class="day-description" data-i18n="home.day.description">
+                From the first coffee in the morning
+                to the last table of the evening.
+            </p>
+
+        </section>
+
+        <!-- MORNING -->
+        <section class="morning-section">
+
+            <div class="morning-top">
+                <span>08:00</span>
+                <span data-i18n="home.morning.title">MORNING</span>
+            </div>
+
+            <div class="morning-content">
+
+                <div class="morning-title">
+                    <span class="section-number">02</span>
+
+                    <h2 data-i18n="home.morning.title">MORNING</h2>
+
+                    <p data-i18n="home.morning.description">
+                        Slow mornings start here.
+                    </p>
+                </div>
+
+                <div class="morning-visual">
+                    <div class="morning-image">
+                        <div class="image-placeholder">
+                            <img src="images/home/morning-croissant.png" alt="Morning Croissant">
+                        </div>
+                    </div>
+
+                    <span class="visual-caption" data-i18n="home.morning.caption">
+                        Coffee · Breakfast · No rush
+                    </span>
+                </div>
+
+            </div>
+
+            <div class="morning-bottom">
+
+                <span data-i18n="home.morning.bottom">
+                    Good food.<br>
+                    Take your time.
+                </span>
+
+                <div class="next-time">
+                    <span>13:40</span>
+                    <strong data-i18n="home.afternoon.next">AFTERNOON →</strong>
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- AFTERNOON -->
+        <section class="afternoon-section">
+
+            <div class="afternoon-top">
+                <span>13:40</span>
+                <span data-i18n="home.afternoon.top">AFTERNOON</span>
+            </div>
+
+            <div class="afternoon-content">
+
+                <div class="afternoon-visual">
+
+                    <div class="afternoon-image">
+                        <div class="afternoon-placeholder">
+                            
+                            <img src="images/home/iced-latte.png" alt="Iced latte with coffee splash">
+                        </div>
+                    </div>
+
+                    <span class="afternoon-caption" data-i18n="home.afternoon.caption">
+                        Lunch · Coffee · Conversations
+                    </span>
+
+                </div>
+
+                <div class="afternoon-title">
+
+                    <span class="section-number">03</span>
+
+                    <h2 data-i18n="home.afternoon.title">AFTER<br>NOON</h2>
+
+                    <p data-i18n="home.afternoon.description">
+                        Long lunches.<br>
+                        Good conversations.
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="afternoon-bottom">
+
+                <span data-i18n="home.afternoon.bottom">
+                    Stay for a little longer.
+                </span>
+
+                <div class="next-time">
+                    <span>18:20</span>
+                    <strong data-i18n="home.golden.next">GOLDEN HOUR →</strong>
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- GOLDEN HOUR -->
+        <section class="golden-section">
+
+            <div class="golden-top">
+                <span>18:20</span>
+                <span data-i18n="home.golden.top">GOLDEN HOUR</span>
+            </div>
+
+            <div class="golden-content">
+
+                <div class="golden-title">
+
+                    <span class="section-number">04</span>
+
+                    <span class="golden-label" data-i18n="home.golden.label">
+                        THE LIGHT CHANGES
+                    </span>
+
+                    <h2 data-i18n="home.golden.title">
+                        GOLDEN<br>
+                        HOUR
+                    </h2>
+
+                    <p data-i18n="home.golden.description">
+                        Coffee slows down.<br>
+                        The evening begins.
+                    </p>
+
+                </div>
+
+                <div class="golden-visual">
+
+                    <div class="golden-glow"></div>
+
+                    <div class="golden-image">
+                        <div class="golden-placeholder">
+                            <img src="images/home/golden-pistachio.png" alt="Pistachio Cake">
+                        </div>
+                    </div>
+
+                    <span class="golden-caption" data-i18n="home.golden.caption">
+                        Dessert · Drinks · Sunset
+                    </span>
+
+                </div>
+
+            </div>
+
+            <div class="golden-bottom">
+
+                <span data-i18n="home.golden.bottom">
+                    A little warmer.<br>
+                    A little slower.
+                </span>
+
+                <div class="next-time">
+                    <span>22:30</span>
+                    <strong data-i18n="home.evening.next">EVENING →</strong>
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- EVENING -->
+        <section class="evening-section">
+
+            <div class="evening-top">
+                <span>22:30</span>
+                <span data-i18n="home.evening.title">EVENING</span>
+            </div>
+
+            <div class="evening-content">
+
+                <div class="evening-title">
+
+                    <span class="section-number">05</span>
+
+                    <span class="evening-label" data-i18n="home.evening.label">
+                        AFTER THE SUN GOES DOWN
+                    </span>
+
+                    <h2 data-i18n="home.evening.title">EVENING</h2>
+
+                    <p data-i18n="home.evening.description">
+                        The lights get softer.<br>
+                        Stay a little longer.
+                    </p>
+
+                </div>
+
+                <div class="evening-visual">
+
+                    <div class="evening-image">
+    <div class="evening-placeholder">
+        <img src="images/home/evening-ramen.jpg" alt="Ramen">
+    </div>
+</div>
+
+                    <span class="evening-caption" data-i18n="home.evening.caption">
+                        Dinner · Drinks · Late nights
+                    </span>
+
+                </div>
+
+            </div>
+
+            <div class="evening-bottom">
+
+                <span data-i18n="home.evening.bottom">
+                    08:00 — 00:00<br>
+                    MORÉ EVERY DAY
+                </span>
+
+                <span class="evening-end" data-i18n="home.evening.end">
+                    THE DAY ENDS HERE.
+                </span>
+
+            </div>
+
+        </section>
+
+        <!-- HOME END -->
+        <section class="home-end">
+
+            <div class="home-end-top">
+                <span>06</span>
+                <span data-i18n="home.end.top">MORÉ — HOME</span>
+            </div>
+
+            <div class="home-end-content">
+
+                <span class="home-end-label" data-i18n="home.end.label">
+                    BEFORE YOU GO
+                </span>
+
+                <h2 data-i18n="home.end.title">
+                    STAY A<br>
+                    LITTLE<br>
+                    <span>LONGER.</span>
+                </h2>
+
+                <p data-i18n="home.end.description">
+                    Good food. Good coffee.<br>
+                    Take your time.
+                </p>
+
+            </div>
+
+            <div class="home-end-actions">
+
+                <a href="menu.html" class="home-end-link">
+                    <span data-i18n="home.end.menu">EXPLORE MENU</span>
+                    <span>→</span>
+                </a>
+
+                <a href="visit.html" class="home-end-link">
+                    <span data-i18n="home.end.visit">VISIT MORÉ</span>
+                    <span>→</span>
+                </a>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <script src="script.js"></script>
+    
+    <script src="home.js"></script>
+
+</body>
+</html>

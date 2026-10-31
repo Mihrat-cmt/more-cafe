@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>MORÉ — Menu</title>
+
+    <link rel="stylesheet" href="style.css">
+    
+    <link rel="stylesheet" href="menu.css">
+</head>
+
+<body>
+
+    <!-- HEADER -->
+
+<header class="header">
+
+    <a href="index.html" class="logo">
+        MORÉ
+    </a>
+
+    <nav class="navigation">
+        <a href="index.html" data-i18n="nav.home">HOME</a>
+        <a href="menu.html" class="active" data-i18n="nav.menu">MENU</a>
+        <a href="visit.html" data-i18n="nav.visit">VISIT</a>
+    </nav>
+
+    <div class="language-switcher">
+        <button
+            class="language-button"
+            id="languageButton"
+            type="button"
+            aria-expanded="false"
+            aria-label="Выбрать язык"
+        >
+            <span id="currentLanguage">EN</span>
+            <span class="language-arrow"></span>
+        </button>
+
+        <div class="language-dropdown" id="languageDropdown" hidden>
+            <button type="button" data-language="ru">Русский</button>
+            <button type="button" data-language="en">English</button>
+            <button type="button" data-language="kk">Қазақша</button>
+        </div>
+    </div>
+
+</header>
+
+
+
+    <!-- MENU HERO -->
+
+    <main>
+
+        <section class="menu-hero">
+
+            <div class="menu-hero-top">
+                <span>07</span>
+                <span>MORÉ — MENU</span>
+            </div>
+
+            <div class="menu-hero-content">
+
+                
+<span class="menu-label" data-i18n="menu.hero.label">
+    FOOD & DRINKS — A DAY AT MORÉ
+</span>
+
+<h1 data-i18n="menu.hero.title">MENU</h1>
+
+<p data-i18n="menu.hero.description">
+    From the first coffee<br>
+    to the last table of the evening.
+</p>
+
+<div class="menu-hero-hint">
+    <span class="menu-hint-line"></span>
+    <span data-i18n="menu.hero.hint">EXPLORE THE MENU</span>
+</div>
+
+            </div>
+
+            <div class="menu-hero-bottom">
+    <span data-i18n="menu.hero.period">MORNING — EVENING</span>
+    <span data-i18n="menu.hero.scroll">SCROLL ↓</span>
+</div>
+
+        </section>
+
+
+        <!-- MORNING -->
+
+        <section class="menu-section morning-menu">
+
+            <div class="menu-section-header">
+
+                <div>
+                    <span class="menu-time">08:00</span>
+                    <span class="menu-period" data-i18n="menu.period.morning">MORNING</span>
+                </div>
+
+                <span class="menu-section-number">
+                    01
+                </span>
+
+            </div>
+
+
+            <div class="menu-items">
+
+                <article class="menu-item">
+
+                    <div class="menu-item-main">
+                        <h2 data-i18n="menu.dish.avocado">AVOCADO TOAST</h2>
+
+                        <p data-i18n="menu.avocado.description">
+                            Sourdough · avocado · poached egg
+                        </p>
+                    </div>
+
+                    <span class="menu-price">
+                        4 800 ₸
+                    </span>
+
+                </article>
+
+
+                <article class="menu-item">
+
+                    <div class="menu-item-main">
+                        <h2 data-i18n="menu.dish.frenchToast">FRENCH TOAST</h2>
+
+                        <p data-i18n="menu.frenchToast.description">
+                            Brioche · berries · vanilla cream
+                        </p>
+                    </div>
+
+                    <span class="menu-price">
+                        4 200 ₸
+                    </span>
+
+                </article>
+
+
+                <article class="menu-item">
+
+                    <div class="menu-item-main">
+                        <h2 data-i18n="menu.dish.benedict">EGGS BENEDICT</h2>
+
+                        <p data-i18n="menu.benedict.description">
+                            Sourdough · poached eggs · hollandaise
+                        </p>
+                    </div>
+
+                    <span class="menu-price">
+                        4 600 ₸
+                    </span>
+
+                </article>
+
+
+                <article class="menu-item">
+
+                    <div class="menu-item-main">
+                        <h2 data-i18n="menu.dish.granola">MORÉ GRANOLA</h2>
+
+                        <p data-i18n="menu.granola.description">
+                            Greek yogurt · granola · seasonal fruit
+                        </p>
+                    </div>
+
+                    <span class="menu-price">
+                        3 900 ₸
+                    </span>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- AFTERNOON -->
+
+        <section class="menu-section afternoon-menu">
+
+            <div class="menu-section-header">
+
+                <div>
+                    <span class="menu-time">13:40</span>
+                    <span class="menu-period" data-i18n="menu.period.afternoon">AFTERNOON</span>
+                </div>
+
+                <span class="menu-section-number">
+                    02
+                </span>
+
+            </div>
+
+
+            <div class="menu-items">
+
+                <article class="menu-item">
+
+                    <div class="menu-item-main">
+                        <h2 data-i18n="menu.dish.burrataTomato">BURRATA & TOMATO</h2>
+
+                        <p data-i18n="menu.burrataTomato.description">
+                            Burrata · heirloom tomato · basil · olive oil
+                        </p>
+                    </div>
+
+                    <span class="menu-price">
+                        5 200 ₸
+                    </span>
+
+                </article>
+
+
+                <article class="menu-item">
+
+                    <div class="menu-item-main">
+                        <h2 data-i18n="menu.dish.chickenPasta">CHICKEN PASTA</h2>
+
+                        <p data-i18n="menu.chickenPasta.description">
+                            Tagliatelle · chicken · parmesan · cream
+                        </p>
+                    </div>
+
+                    <span class="menu-price">
+                        5 900 ₸
+                    </span>
+
+                </article>
+
+
+                <article class="menu-item">
+
+                    <div class="menu-item-main">
+                        
+                    <h2 data-i18n="menu.dish.burger">MORÉ BURGER</h2>
+
+                        <p data-i18n="menu.burger.description">
+                            Beef · brioche · cheddar · house sauce
+                        </p>
+                    </div>
+
+                    <span class="menu-price">
+                        6 200 ₸
+                    </span>
+
+                </article>
+
+
+                <article class="menu-item">
+
+                    <div class="menu-item-main">
+                        <h2 data-i18n="menu.dish.caesar">CAESAR SALAD</h2>
+
+                        <p data-i18n="menu.caesar.description">
+                            Romaine · chicken · parmesan · crispy bread
+                        </p>
+                    </div>
+
+                    <span class="menu-price">
+                        4 900 ₸
+                    </span>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- GOLDEN HOUR -->
+
+        <section class="menu-section golden-menu">
+
+            <div class="menu-section-header">
+
+                <div>
+                    <span class="menu-time">18:20</span>
+                    <span class="menu-period" data-i18n="menu.period.golden">GOLDEN HOUR</span>
+                </div>
+
+                <span class="menu-section-number">
+                    03
+                </span>
+
+            </div>
+
+
+            <div class="menu-items">
+
+                <article class="menu-item">
+
+                    <div class="menu-item-main">
+                        <h2 data-i18n="menu.dish.tiramisu">TIRAMISU</h2>
+
+                        <p data-i18n="menu.tiramisu.description">
+                            Mascarpone · espresso · cocoa
+                        </p>
+                    </div>
+
+                    <span class="menu-price">
+                        3 800 ₸
+                    </span>
+
+                </article>
+
+
+                
+<article class="menu-item">
+    <div class="menu-item-main">
+        <h2 data-i18n="menu.dish.pistachioCake">PISTACHIO CAKE</h2>
+        <p data-i18n="menu.pistachioCake.description">Pistachio · vanilla · soft cream</p>
+    </div>
+
+    <span class="menu-price">3 900 ₸</span>
+</article>
+
+
+                <article class="menu-item">
+
+                    <div class="menu-item-main">
+                        <h2 data-i18n="menu.dish.icedLatte">ICED LATTE</h2>
+
+                        <p data-i18n="menu.icedLatte.description">
+                            Espresso · milk · ice
+                        </p>
+                    </div>
+
+                    <span class="menu-price">
+                        2 600 ₸
+                    </span>
+
+                </article>
+
+
+                <article class="menu-item">
+
+                    <div class="menu-item-main">
+                        <h2 data-i18n="menu.dish.espressoTonic">ESPRESSO TONIC</h2>
+
+                        <p data-i18n="menu.espressoTonic.description">
+                            Espresso · tonic · citrus
+                        </p>
+                    </div>
+
+                    <span class="menu-price">
+                        2 900 ₸
+                    </span>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- EVENING -->
+
+        <section class="menu-section evening-menu">
+
+            <div class="menu-section-header">
+
+                <div>
+                    <span class="menu-time">22:30</span>
+                    <span class="menu-period" data-i18n="menu.period.evening">EVENING</span>
+                </div>
+
+                <span class="menu-section-number">
+                    04
+                </span>
+
+            </div>
+
+
+            <div class="menu-items">
+
+                <article class="menu-item">
+
+                    <div class="menu-item-main">
+                        <h2 data-i18n="menu.dish.trufflePasta">TRUFFLE PASTA</h2>
+
+                        <p data-i18n="menu.trufflePasta.description">
+                            Tagliatelle · truffle · parmesan
+                        </p>
+                    </div>
+
+                    <span class="menu-price">
+                        6 800 ₸
+                    </span>
+
+                </article>
+
+
+                <article class="menu-item">
+
+                    <div class="menu-item-main">
+                        <h2 data-i18n="menu.dish.steak">STEAK & POTATO</h2>
+
+                        <p data-i18n="menu.steak.description">
+                            Beef steak · potatoes · herb butter
+                        </p>
+                    </div>
+
+                    <span class="menu-price">
+                        8 900 ₸
+                    </span>
+
+                </article>
+
+
+                <article class="menu-item">
+
+                    <div class="menu-item-main">
+                        <h2 data-i18n="menu.dish.burrata">BURRATA</h2>
+
+
+                        <p data-i18n="menu.burrata.description">
+                            Burrata · roasted vegetables · herbs
+                        </p>
+                    </div>
+
+                    <span class="menu-price">
+                        5 600 ₸
+                    </span>
+
+                </article>
+
+
+                <article class="menu-item">
+
+                    <div class="menu-item-main">
+                        <h2 data-i18n="menu.dish.fondant">CHOCOLATE FONDANT</h2>
+
+                        <p data-i18n="menu.fondant.description">
+                            Dark chocolate · vanilla ice cream
+                        </p>
+                    </div>
+
+                    <span class="menu-price">
+                        4 100 ₸
+                    </span>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- MENU END -->
+
+        <section class="menu-end">
+    <span>MORÉ</span>
+
+    <h2 data-i18n="menu.end.title">
+        TAKE<br>
+        YOUR<br>
+        TIME.
+    </h2>
+
+    <a href="visit.html" data-i18n="menu.end.visit">
+        VISIT MORÉ →
+    </a>
+</section>
+
+    </main>
+
+
+    <script src="script.js"></script>
+    
+    <script src="menu.js"></script>
+
+</body>
+</html>
