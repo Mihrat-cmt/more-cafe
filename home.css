@@ -123,10 +123,10 @@ body {
 .hero-image {
     position: absolute;
 
-    right: 4%;
+    right: 20%;
     top: 50%;
 
-    width: min(38vw, 520px);
+    width: min(27vw, 370px);
 
     transform: translateY(-50%);
 
