@@ -2401,9 +2401,10 @@ html[lang="ru"] .hero h1 {
     }
 
     html[lang="ru"] .hero-image {
-    width: min(38vw, 520px);
-    right: 12%;
+    width: min(27vw, 370px);
+    right: 20%;
 }
+
 }
 
 /* Large translated section headings */
