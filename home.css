@@ -35,91 +35,7 @@ body {
 
 
 
-/* =========================
-   HEADER — SHARED
-========================= */
 
-.header {
-    position: fixed;
-    top: 0;
-    left: 0;
-
-    width: 100%;
-    height: 90px;
-    padding: 0 5vw;
-    box-sizing: border-box;
-
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-
-    z-index: 1000;
-
-    background: rgba(248, 243, 234, 0.92);
-    -webkit-backdrop-filter: blur(14px);
-    backdrop-filter: blur(14px);
-
-    border-bottom: 1px solid rgba(86, 56, 42, 0.08);
-}
-
-.logo {
-    display: inline-block;
-    flex-shrink: 0;
-
-    color: #56382A;
-    font-family: "Playfair Display", serif;
-    font-size: 30px;
-    font-weight: 400;
-    line-height: 1;
-    letter-spacing: 0.08em;
-    text-decoration: none;
-}
-.navigation {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 24px;
-
-    min-width: 0;
-    margin: 0;
-    white-space: nowrap;
-}
-
-.navigation a {
-    position: relative;
-    flex-shrink: 0;
-
-    color: #56382A;
-    font-family: "DM Sans", sans-serif;
-    font-size: 10px;
-    font-weight: 500;
-    letter-spacing: 0.12em;
-    white-space: nowrap;
-    text-decoration: none;
-
-    transition: color 0.3s ease;
-}
-
-.navigation a:hover {
-    color: #C96F4A;
-}
-
-.navigation a.active::after {
-    content: "";
-
-    position: absolute;
-    left: 0;
-    bottom: -8px;
-
-    width: 100%;
-    height: 1px;
-
-    background: #C96F4A;
-}
 /* MOBILE HEADER */
 
 
@@ -314,22 +230,8 @@ body {
 @media (max-width: 768px) {
 
         .header {
-        height: 75px;
-        padding: 0 5vw;
-    }
-
-    .logo {
-        font-size: 25px;
-    }
-
-    .navigation {
-        gap: clamp(8px, 2.5vw, 16px);
-    }
-
-    .navigation a {
-        font-size: 9px;
-        letter-spacing: 0.04em;
-    }
+    height: 72px;
+}
 
     .hero {
     min-height: 100svh;
@@ -2466,8 +2368,8 @@ body {
 }
 
 /* =========================================
-   MORÉ — MULTILANGUAGE LAYOUT FIX
-   Fix long RU / KK translations
+   MORÉ — TYPOGRAPHY FIX
+   English / Russian / Kazakh
 ========================================= */
 
 /* HERO: reserve space for longer headings */
@@ -2491,22 +2393,14 @@ html[lang="ru"] .hero h1 {
     letter-spacing: -0.045em;
 }
 
-/* Kazakh hero title */
-html[lang="kk"] .hero h1 {
-    font-size: clamp(48px, 6.2vw, 94px);
-    line-height: 0.98;
-    letter-spacing: -0.045em;
-}
 
 /* Keep the hero text above the image */
 @media (min-width: 769px) {
-    html[lang="ru"] .hero-content,
-    html[lang="kk"] .hero-content {
+    html[lang="ru"] .hero-content{
         max-width: 54%;
     }
 
-    html[lang="ru"] .hero-image,
-html[lang="kk"] .hero-image {
+    html[lang="ru"] .hero-image {
     width: min(38vw, 520px);
     right: 12%;
 }
@@ -2514,28 +2408,24 @@ html[lang="kk"] .hero-image {
 
 /* Large translated section headings */
 
-html[lang="ru"] .about-intro,
-html[lang="kk"] .about-intro {
+html[lang="ru"] .about-intro {
     font-size: clamp(34px, 4.5vw, 62px);
     line-height: 1.12;
     overflow-wrap: break-word;
 }
 
-html[lang="ru"] .afternoon-title h2,
-html[lang="kk"] .afternoon-title h2 {
+html[lang="ru"] .afternoon-title h2{
     font-size: clamp(58px, 8.5vw, 130px);
     line-height: 0.9;
     overflow-wrap: break-word;
 }
 
-html[lang="ru"] .golden-title h2,
-html[lang="kk"] .golden-title h2 {
+html[lang="ru"] .golden-title h2 {
     font-size: clamp(58px, 8.5vw, 135px);
     line-height: 0.9;
 }
 
-html[lang="ru"] .home-end-content h2,
-html[lang="kk"] .home-end-content h2 {
+html[lang="ru"] .home-end-content h2 {
     font-size: clamp(58px, 9.5vw, 145px);
     line-height: 0.92;
     overflow-wrap: break-word;
@@ -2604,31 +2494,26 @@ html[lang="kk"] .home-end-content h2 {
     }
 
     .hero h1,
-    html[lang="ru"] .hero h1,
-    html[lang="kk"] .hero h1 {
+    html[lang="ru"] .hero h1 {
         font-size: clamp(40px, 11vw, 72px);
         line-height: 1;
         letter-spacing: -0.04em;
     }
 
-    html[lang="ru"] .hero-content,
-    html[lang="kk"] .hero-content {
+    html[lang="ru"] .hero-content {
         max-width: 100%;
     }
 
 
-    html[lang="ru"] .afternoon-title h2,
-    html[lang="kk"] .afternoon-title h2 {
+    html[lang="ru"] .afternoon-title h2 {
         font-size: clamp(48px, 13vw, 90px);
     }
 
-    html[lang="ru"] .golden-title h2,
-    html[lang="kk"] .golden-title h2 {
+    html[lang="ru"] .golden-title h2 {
         font-size: clamp(48px, 13vw, 90px);
     }
 
-    html[lang="ru"] .home-end-content h2,
-    html[lang="kk"] .home-end-content h2 {
+    html[lang="ru"] .home-end-content h2 {
         font-size: clamp(48px, 13vw, 90px);
     }
 
@@ -2658,7 +2543,7 @@ html[lang="kk"] .home-end-content h2 {
 
 /* =========================================
    MORÉ — TYPOGRAPHY FIX
-   English / Russian / Kazakh
+   English / Russian
 ========================================= */
 
 /* 1. Не разрываем слова посреди букв */
@@ -2689,31 +2574,27 @@ html[lang="kk"] .home-end-content h2 {
 }
 
 /* 3. Длинные заголовки на русском и казахском */
-html[lang="ru"] .hero h1,
-html[lang="kk"] .hero h1 {
+html[lang="ru"] .hero h1 {
     font-size: clamp(42px, 5.8vw, 88px);
     line-height: 1;
     letter-spacing: -0.035em;
 }
 
-html[lang="ru"] .afternoon-title h2,
-html[lang="kk"] .afternoon-title h2 {
+html[lang="ru"] .afternoon-title h2 {
     font-size: clamp(48px, 7vw, 108px);
     line-height: 0.98;
     letter-spacing: -0.045em;
 }
 
 html[lang="ru"] .golden-title h2,
-html[lang="kk"] .golden-title h2,
-html[lang="ru"] .evening-title h2,
-html[lang="kk"] .evening-title h2 {
+
+html[lang="ru"] .evening-title h2 {
     font-size: clamp(48px, 7vw, 112px);
     line-height: 0.98;
     letter-spacing: -0.045em;
 }
 
-html[lang="ru"] .home-end-content h2,
-html[lang="kk"] .home-end-content h2 {
+html[lang="ru"] .home-end-content h2 {
     font-size: clamp(54px, 8vw, 130px);
     line-height: 0.98;
     letter-spacing: -0.045em;
@@ -2733,26 +2614,23 @@ html[lang="kk"] .home-end-content h2 {
 /* 5. На телефонах */
 @media (max-width: 768px) {
     .hero h1,
-    html[lang="ru"] .hero h1,
-    html[lang="kk"] .hero h1 {
+    html[lang="ru"] .hero h1{
         font-size: clamp(38px, 10.5vw, 68px);
         line-height: 1.02;
         letter-spacing: -0.035em;
     }
 
     html[lang="ru"] .afternoon-title h2,
-    html[lang="kk"] .afternoon-title h2,
+  
     html[lang="ru"] .golden-title h2,
-    html[lang="kk"] .golden-title h2,
-    html[lang="ru"] .evening-title h2,
-    html[lang="kk"] .evening-title h2 {
+  
+    html[lang="ru"] .evening-title h2 {
         font-size: clamp(42px, 11vw, 78px);
         line-height: 1;
         letter-spacing: -0.04em;
     }
 
-    html[lang="ru"] .home-end-content h2,
-    html[lang="kk"] .home-end-content h2 {
+    html[lang="ru"] .home-end-content h2 {
         font-size: clamp(44px, 12vw, 82px);
         line-height: 1;
     }

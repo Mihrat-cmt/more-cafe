@@ -399,35 +399,7 @@ body {
         white-space: nowrap;
     }
 
-    /* RUSSIAN */
+    
 
-    html[lang="ru"] .header .navigation {
-        gap: 6px;
-    }
-
-    html[lang="ru"] .header .navigation a {
-        font-size: 7px;
-        letter-spacing: 0;
-    }
-
-    /* KAZAKH */
-
-    html[lang="kk"] .header .navigation {
-        gap: 5px;
-    }
-
-    html[lang="kk"] .header .navigation a {
-        font-size: 7px;
-        letter-spacing: 0;
-    }
-}
-
-@media (max-width: 680px) {
-    .header {
-        outline: 2px solid red;
-    }
-
-    .header .language-switcher {
-        outline: 2px solid blue;
-    }
+    
 }

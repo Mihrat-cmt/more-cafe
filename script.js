@@ -257,136 +257,8 @@ const translations = {
 "menu.dish.steak": "СТЕЙК С КАРТОФЕЛЕМ",
 "menu.dish.burrata": "БУРРАТА",
 "menu.dish.fondant": "ШОКОЛАДНЫЙ ФОНДАН"
-    },
-
-    kk: {
-        // НАВИГАЦИЯ
-        "nav.home": "БАСТЫ БЕТ",
-        "nav.menu": "МӘЗІР",
-        "nav.visit": "БІЗГЕ КЕЛІҢІЗ",
-
-        // НЕГІЗГІ ЭКРАН
-        "home.hero.small": "ҚАЙЫРЛЫ ТАҢ.",
-        "home.hero.title": "ҚОШ<br>КЕЛДІҢІЗ <span>MORÉ.</span>",
-        "home.hero.description": "Кофе, дәмді тағам<br>және шағын үзілістерге арналған кафе.",
-        "home.hero.tagline": "Тағы біраз уақыт қалыңыз.",
-        "home.hero.image": "MORÉ таңғы асы",
-        "home.hero.time": "ТАҢ",
-        "home.hero.scroll": "ТӨМЕНГЕ",
-
-        // КАФЕ ТУРАЛЫ
-        "home.about.label": "MORÉ ТУРАЛЫ",
-        "home.about.intro": "Кофе, дәмді тағам<br>және шағын үзілістерге арналған орын.",
-        "home.about.text": "MORÉ — асықпай өтетін таңдарға,<br>ұзақ түскі ас пен жайлы кештерге арналған заманауи қалалық кафе.",
-
-        // MORÉ-ДЕГІ БІР КҮН
-        "home.day.label": "MORÉ-ДЕГІ",
-        "home.day.days": "ДҮЙСЕНБІ — ЖЕКСЕНБІ",
-        "home.day.description": "Таңғы алғашқы кофеден бастап<br>кешкі соңғы үстелге дейін.",
-
-        // ТАҢ
-        "home.morning.title": "ТАҢ",
-        "home.morning.description": "Асықпайтын таң осында басталады.",
-        "home.morning.placeholder": "СУРЕТІҢІЗ",
-        "home.morning.caption": "Кофе · Таңғы ас · Асықпай",
-        "home.morning.bottom": "Дәмді тағам.<br>Асықпаңыз.",
-
-        // ТҮСКІ УАҚЫТ
-        "home.afternoon.top": "ТҮСКІ УАҚЫТ",
-        "home.afternoon.next": "ТҮСКІ УАҚЫТ →",
-        "home.afternoon.title": "ТҮСТЕН<br>КЕЙІН",
-        "home.afternoon.description": "Ұзақ түскі ас.<br>Жайлы әңгімелер.",
-        "home.afternoon.placeholder": "СУРЕТІҢІЗ",
-        "home.afternoon.caption": "Түскі ас · Кофе · Әңгіме",
-        "home.afternoon.bottom": "Тағы біраз уақыт қалыңыз.",
-
-        // АЛТЫН САҒАТ
-        "home.golden.top": "АЛТЫН САҒАТ",
-        "home.golden.next": "АЛТЫН САҒАТ →",
-        "home.golden.label": "ЖАРЫҚ ӨЗГЕРЕДІ",
-        "home.golden.title": "АЛТЫН<br>САҒАТ",
-        "home.golden.description": "Кофе асықпай ішіледі.<br>Кеш басталады.",
-        "home.golden.placeholder": "СУРЕТІҢІЗ",
-        "home.golden.caption": "Десерт · Сусындар · Күн батуы",
-        "home.golden.bottom": "Сәл жылырақ.<br>Сәл баяуырақ.",
-
-        // КЕШ
-        "home.evening.next": "КЕШ →",
-        "home.evening.label": "КҮН БАТҚАННАН КЕЙІН",
-        "home.evening.title": "КЕШ",
-        "home.evening.description": "Жарық жұмсара түседі.<br>Тағы біраз уақыт қалыңыз.",
-        "home.evening.placeholder": "СУРЕТІҢІЗ",
-        "home.evening.caption": "Кешкі ас · Сусындар · Кешкі уақыт",
-        "home.evening.bottom": "08:00 — 00:00<br>MORÉ КҮН САЙЫН",
-        "home.evening.end": "КҮН ОСЫ ЖЕРДЕ АЯҚТАЛАДЫ.",
-
-        // БАСТЫ БЕТТІҢ СОҢЫ
-        "home.end.top": "MORÉ — БАСТЫ БЕТ",
-        "home.end.label": "КЕТЕР АЛДЫНДА",
-        "home.end.title": "ТАҒЫ<br>БІРАЗ<br><span>ҚАЛЫҢЫЗ.</span>",
-        "home.end.description": "Дәмді тағам. Жақсы кофе.<br>Асықпаңыз.",
-        "home.end.menu": "МӘЗІРДІ ҚАРАУ",
-        "home.end.visit": "MORÉ-ГЕ КЕЛУ",
-
-        // МӘЗІРДІҢ БАСЫ
-"menu.hero.label": "ТАҒАМ МЕН СУСЫНДАР — MORÉ-ДЕГІ БІР КҮН",
-"menu.hero.title": "МӘЗІР",
-"menu.hero.description": "Алғашқы кофеден бастап<br>кешкі соңғы үстелге дейін.",
-"menu.hero.hint": "МӘЗІРМЕН ТАНЫСУ",
-"menu.hero.period": "ТАҢ — КЕШ",
-"menu.hero.scroll": "ТӨМЕНГЕ ↓",
-
-// КҮН УАҚЫТТАРЫ
-"menu.period.morning": "ТАҢ",
-"menu.period.afternoon": "ТҮСКІ УАҚЫТ",
-"menu.period.golden": "АЛТЫН САҒАТ",
-"menu.period.evening": "КЕШ",
-
-// ТАҢҒЫ ТАҒАМДАР
-"menu.avocado.description": "Ашытқылы нан · авокадо · пашот жұмыртқасы",
-"menu.frenchToast.description": "Бриошь · жидектер · ванильді крем",
-"menu.benedict.description": "Ашытқылы нан · пашот жұмыртқасы · голланд тұздығы",
-"menu.granola.description": "Грек йогурты · гранола · маусымдық жемістер",
-
-// ТҮСКІ ТАҒАМДАР
-"menu.burrataTomato.description": "Буррата · қызанақ · райхан · зәйтүн майы",
-"menu.chickenPasta.description": "Тальятелле · тауық еті · пармезан · кілегей",
-"menu.burger.description": "Сиыр еті · бриошь · чеддер · фирмалық тұздық",
-"menu.caesar.description": "Романо салаты · тауық еті · пармезан · қытырлақ нан",
-
-// АЛТЫН САҒАТ
-"menu.tiramisu.description": "Маскарпоне · эспрессо · какао",
-"menu.pistachioCake.description": "Пісте · ваниль · нәзік крем",
-"menu.icedLatte.description": "Эспрессо · сүт · мұз",
-"menu.espressoTonic.description": "Эспрессо · тоник · цитрус",
-
-// КЕШКІ ТАҒАМДАР
-"menu.trufflePasta.description": "Тальятелле · трюфель · пармезан",
-"menu.steak.description": "Сиыр стейкі · картоп · шөп қосылған сары май",
-"menu.burrata.description": "Буррата · пеште піскен көкөністер · көк шөп",
-"menu.fondant.description": "Қара шоколад · ванильді балмұздақ",
-
-// МӘЗІРДІҢ СОҢЫ
-"menu.end.title": "АСЫҚПАЙ<br>ДЕМАЛЫҢЫЗ.",
-"menu.end.visit": "MORÉ-ГЕ КЕЛУ →",
-
-"menu.dish.avocado": "АВОКАДО ТОСТЫ",
-"menu.dish.frenchToast": "ФРАНЦУЗ ТОСТЫ",
-"menu.dish.benedict": "БЕНЕДИКТ ЖҰМЫРТҚАЛАРЫ",
-"menu.dish.granola": "MORÉ ГРАНОЛАСЫ",
-"menu.dish.burrataTomato": "БУРРАТА ЖӘНЕ ҚЫЗАНАҚ",
-"menu.dish.chickenPasta": "ТАУЫҚ ЕТІ ҚОСЫЛҒАН ПАСТА",
-"menu.dish.burger": "MORÉ БУРГЕРІ",
-"menu.dish.caesar": "ЦЕЗАРЬ САЛАТЫ",
-"menu.dish.tiramisu": "ТИРАМИСУ",
-"menu.dish.pistachioCake": "ПІСТЕЛІ ТОРТ",
-"menu.dish.icedLatte": "АЙС ЛАТТЕ",
-"menu.dish.espressoTonic": "ЭСПРЕССО-ТОНИК",
-"menu.dish.trufflePasta": "ТРЮФЕЛЬ ҚОСЫЛҒАН ПАСТА",
-"menu.dish.steak": "КАРТОП ҚОСЫЛҒАН СТЕЙК",
-"menu.dish.burrata": "БУРРАТА",
-"menu.dish.fondant": "ШОКОЛАДТЫ ФОНДАН"
     }
+
 };
 
 
@@ -429,6 +301,16 @@ if (languageButton && languageDropdown) {
 function setLanguage(language) {
     if (!translations[language]) return;
 
+    // UPDATE HTML LANGUAGE
+    document.documentElement.lang = language;
+
+    // SAVE LANGUAGE
+    try {
+        localStorage.setItem("moreLanguage", language);
+    } catch (error) {
+        console.warn("Не удалось сохранить язык.", error);
+    }
+
     // TRANSLATE TEXT AND HTML
     document.querySelectorAll("[data-i18n]").forEach(element => {
         const key = element.dataset.i18n;
@@ -436,10 +318,6 @@ function setLanguage(language) {
 
         if (translation !== undefined) {
             element.innerHTML = translation;
-
-            if (typeof window.applyModalTranslations === "function") {
-    window.applyModalTranslations();
-}
         }
     });
 
@@ -458,14 +336,9 @@ function setLanguage(language) {
         currentLanguage.textContent = language.toUpperCase();
     }
 
-    // UPDATE HTML LANGUAGE
-    document.documentElement.lang = language;
-
-    // SAVE LANGUAGE
-    try {
-        localStorage.setItem("moreLanguage", language);
-    } catch (error) {
-        console.warn("Не удалось сохранить язык.", error);
+    // UPDATE MODAL TRANSLATIONS
+    if (typeof window.applyModalTranslations === "function") {
+        window.applyModalTranslations();
     }
 }
 
@@ -477,6 +350,10 @@ try {
     savedLanguage = localStorage.getItem("moreLanguage") || "en";
 } catch (error) {
     console.warn("Не удалось загрузить сохранённый язык.", error);
+}
+
+if (savedLanguage !== "en" && savedLanguage !== "ru") {
+    savedLanguage = "en";
 }
 
 setLanguage(savedLanguage);

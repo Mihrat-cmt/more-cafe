@@ -1,7 +1,5 @@
-// ==========================================
 // MORÉ — VISIT PAGE TRANSLATIONS
-// English / Русский / Қазақша
-// ==========================================
+// English / Русский
 
 Object.assign(translations.en, {
     "visit.header.find": 'FIND US <span>↗</span>',
@@ -153,84 +151,7 @@ Object.assign(translations.ru, {
     "visit.footer.copyright": "© 2026 MORÉ"
 });
 
-// ==========================================
-// KAZAKH — VISIT PAGE TRANSLATIONS
-// ==========================================
 
-Object.assign(translations.kk, {
-    "visit.header.find": 'БІЗДІ ТАБУ <span>↗</span>',
-
-    "visit.hero.eyebrow": "ҚАЛА ІШІНДЕГІ ӨЗІҢЕ ЖАЙЛЫ ОРЫН",
-    "visit.hero.title": "Бізге сәл<br><em>жақындай түс.</em>",
-    "visit.hero.description":
-        "Дәмді кофе, асықпай өткізген сәттер<br>және өзіңді үйдегідей сезінетін үстел.",
-    "visit.hero.discover": "MORÉ-ні таны",
-    "visit.hero.index": "MORÉ-ДЕГІ СӘТ — 01",
-
-    "visit.intro.label": '<span class="visit-small-line"></span>ДЕМАЛУҒА АРНАЛҒАН ОРЫН',
-    "visit.intro.title":
-        "Бұл жай ғана<br>баратын жер емес.<br><em>Ұзағырақ қалғың келетін орын.</em>",
-    "visit.intro.paragraph1":
-        "Кей күндері сәл баяулағың келеді. Тағы бір шыны кофе ішу, таныс жүзді көру және күн сәулесінің үстел үстімен баяу жылжығанын тамашалау.",
-    "visit.intro.paragraph2":
-        "MORÉ дәл осындай сәттер үшін жасалған — алғашында қарапайым көрінетін, бірақ күннің ең сүйікті бөлігіне айналатын сәттер үшін.",
-    "visit.intro.menu": 'МӘЗІРІМІЗБЕН ТАНЫС <span>↗</span>',
-
-    "visit.story.label": "01 / АТМОСФЕРА",
-    "visit.story.subtitle": "Күнделікті өмірдегі жайлылық.",
-    "visit.story.photo1": "<span>01</span>ЕРКІН ТЫНЫСТАУҒА ОРЫН",
-    "visit.story.quote":
-        "«Асығыстық аз болсын.<br>Өмірден алатын <em>ләззат көп болсын.</em>»",
-    "visit.story.photo2": "<span>02</span>ӘР ДЕТАЛЬҒА ҚАМҚОРЛЫҚПЕН",
-
-    "visit.rhythm.label":
-        '<span class="visit-small-line"></span>MORÉ ЫРҒАҒЫ',
-    "visit.rhythm.title":
-        "Әр уақыттың<br>өз <em>көңіл күйі бар.</em>",
-
-    "visit.rhythm.morning.title": "Асықпай басталған таң",
-    "visit.rhythm.morning.text":
-        "Алғашқы кофе және ешқайда асығудың қажеті жоқ.",
-    "visit.rhythm.morning.time": "ТАҢ",
-
-    "visit.rhythm.afternoon.title": "Шағын үзілістер",
-    "visit.rhythm.afternoon.text":
-        "Қарбалас күннің ортасындағы жайлы үстел.",
-    "visit.rhythm.afternoon.time": "ТҮСКЕ ДЕЙІНГІ ЕМЕС, КҮНДІЗГІ УАҚЫТ",
-
-    "visit.rhythm.evening.title": "Алтын сағаттар",
-    "visit.rhythm.evening.text":
-        "Жылы жарық, жақсы компания және тағы бір сәт.",
-    "visit.rhythm.evening.time": "КЕШКЕ ЖАҚЫН",
-
-    "visit.details.stamp": "СЕН ҮШІН<br>ҮСТЕЛ",
-    "visit.details.label":
-        '<span class="visit-small-line"></span>КЕЛЕ ҒОЙ',
-    "visit.details.title":
-        "Өзіңнің жаңа<br>сүйікті <em>үзілісің.</em>",
-    "visit.details.description":
-        "Таңғы кофеге кел, дәмді бірдеңе үшін аялда немесе жай ғана өзіңе уақыт бөл.",
-
-    "visit.contact.address": "БІЗДІ ТАП",
-    "visit.contact.addressValue": "Мекенжай кейін қосылады",
-    "visit.contact.hours": "ЖҰМЫС УАҚЫТЫ",
-    "visit.contact.hoursValue": "Жұмыс кестесі кейін қосылады",
-    "visit.contact.hello": "БІЗБЕН БАЙЛАНЫС",
-    "visit.contact.helloValue": "Байланыс деректері кейін қосылады",
-
-    "visit.details.footnote":
-        "Барлығы дайын болғанда толық ақпаратты қосамыз. Әзірге мұны шақыруымыз деп қабылда.",
-
-    "visit.finale.eyebrow": "САҒАН ҮЗІЛІС ҚАЖЕТ БОЛҒАНДА",
-    "visit.finale.title":
-        "Саған<br><em>аздап уақыт сыйлаймыз.</em>",
-    "visit.finale.menu": 'МӘЗІРДІ КӨРУ <span>↗</span>',
-    "visit.finale.mark": "MORÉ — ӘР СӘТ ҮШІН",
-
-    "visit.footer.tagline": "Маңызды нәрселерге көбірек уақыт.",
-    "visit.footer.top": "ЖОҒАРЫҒА ↑",
-    "visit.footer.copyright": "© 2026 MORÉ"
-});
 
 
 // ==========================================
